@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.cat.monitor.infrastructure.dao.IMonitorDataDao">
+
+    <resultMap id="dataMap" type="cn.cat.monitor.infrastructure.po.MonitorData">
+        <id column="id" property="id"/>
+        <result column="monitor_id" property="monitorId"/>
+        <result column="monitor_name" property="monitorName"/>
+        <result column="monitor_node_id" property="monitorNodeId"/>
+        <result column="system_name" property="systemName"/>
+        <result column="clazz_name" property="clazzName"/>
+        <result column="method_name" property="methodName"/>
+        <result column="attribute_name" property="attributeName"/>
+        <result column="attribute_field" property="attributeField"/>
+        <result column="attribute_value" property="attributeValue"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+    </resultMap>
+
+</mapper>
