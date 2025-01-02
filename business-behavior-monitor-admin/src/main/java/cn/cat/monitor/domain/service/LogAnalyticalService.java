@@ -1,6 +1,7 @@
 package cn.cat.monitor.domain.service;
 
 import cn.cat.monitor.domain.model.entity.MonitorDataEntity;
+import cn.cat.monitor.domain.model.entity.MonitorDataMapEntity;
 import cn.cat.monitor.domain.model.valobj.GatherNodeExpressionVO;
 import cn.cat.monitor.domain.repository.IMonitorRepository;
 import cn.cat.monitor.types.Constants;
@@ -65,6 +66,11 @@ public class LogAnalyticalService implements ILogAnalyticalService {
                 repository.saveMonitoryData(monitorDataEntity);
             }
         }
+    }
+
+    @Override
+    public List<MonitorDataMapEntity> queryMonitorDataMapEntityList() {
+        return repository.queryMonitorDataMapEntityList();
     }
 
 }

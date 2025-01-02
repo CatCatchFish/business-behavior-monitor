@@ -1,10 +1,12 @@
 package cn.cat.monitor.infrastructure.repository;
 
 import cn.cat.monitor.domain.model.entity.MonitorDataEntity;
+import cn.cat.monitor.domain.model.entity.MonitorDataMapEntity;
 import cn.cat.monitor.domain.model.valobj.GatherNodeExpressionVO;
 import cn.cat.monitor.domain.repository.IMonitorRepository;
 import cn.cat.monitor.infrastructure.dao.*;
 import cn.cat.monitor.infrastructure.po.MonitorData;
+import cn.cat.monitor.infrastructure.po.MonitorDataMap;
 import cn.cat.monitor.infrastructure.po.MonitorDataMapNode;
 import cn.cat.monitor.infrastructure.po.MonitorDataMapNodeField;
 import cn.cat.monitor.infrastructure.redis.IRedisService;
@@ -97,4 +99,18 @@ public class MonitorRepository implements IMonitorRepository {
         redisService.incr(cacheKey);
     }
 
+    @Override
+    public List<MonitorDataMapEntity> queryMonitorDataMapEntityList() {
+        List<MonitorDataMap> monitorDataMaps = monitorDataMapDao.queryMonitorDataMapList();
+
+        List<MonitorDataMapEntity> monitorDataMapEntities = new ArrayList<>();
+        for (MonitorDataMap monitorDataMap : monitorDataMaps) {
+            MonitorDataMapEntity monitorDataEntity = MonitorDataMapEntity.builder()
+                    .monitorId(monitorDataMap.getMonitorId())
+                    .monitorName(monitorDataMap.getMonitorName())
+                    .build();
+            monitorDataMapEntities.add(monitorDataEntity);
+        }
+        return monitorDataMapEntities;
+    }
 }

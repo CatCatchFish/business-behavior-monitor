@@ -15,5 +15,10 @@
         from monitor_data_map
         where monitor_id = #{monitorId}
     </select>
+    
+    <select id="queryMonitorDataMapList" resultMap="dataMap">
+        select monitor_id, monitor_name
+        from monitor_data_map
+    </select>
 
 </mapper>
