@@ -35,6 +35,13 @@ public class ApiTest {
         new CountDownLatch(1).await();
     }
 
+    @Test
+    public void test_log_02() throws InterruptedException {
+        log.info("测试日志 {} {} {}", userEntity.getUserId(), userEntity.getUserName(), JSON.toJSONString(userEntity));
+
+        new CountDownLatch(1).await();
+    }
+
     @Data
     static class UserEntity {
         private String userId;

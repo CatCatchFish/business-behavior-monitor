@@ -3,6 +3,7 @@ package cn.cat.monitor.domain.repository;
 import cn.cat.monitor.domain.model.entity.MonitorDataEntity;
 import cn.cat.monitor.domain.model.entity.MonitorDataMapEntity;
 import cn.cat.monitor.domain.model.valobj.GatherNodeExpressionVO;
+import cn.cat.monitor.domain.model.valobj.MonitorTreeConfigVO;
 
 import java.util.List;
 
@@ -15,5 +16,7 @@ public interface IMonitorRepository {
     void saveMonitoryData(MonitorDataEntity monitorDataEntity);
 
     List<MonitorDataMapEntity> queryMonitorDataMapEntityList();
+
+    MonitorTreeConfigVO queryMonitorFlowData(String monitorId);
 
 }

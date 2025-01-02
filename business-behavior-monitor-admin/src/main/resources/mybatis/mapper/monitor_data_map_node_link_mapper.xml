@@ -11,5 +11,10 @@
         <result column="update_time" property="updateTime"/>
     </resultMap>
 
+    <select id="queryMonitorDataMapNodeLinkByMonitorId" parameterType="java.lang.String" resultMap="dataMap">
+        select id, from_monitor_node_id, to_monitor_node_id
+        from monitor_data_map_node_link
+        where monitor_id = #{monitorId}
+    </select>
 
 </mapper>

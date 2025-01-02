@@ -10,4 +10,6 @@ public interface IMonitorDataMapNodeDao {
 
     List<MonitorDataMapNode> queryMonitoryDataMapNodeList(MonitorDataMapNode monitorDataMapNode);
 
+    List<MonitorDataMapNode> queryMonitoryDataMapNodeByMonitorId(String monitorId);
+
 }
