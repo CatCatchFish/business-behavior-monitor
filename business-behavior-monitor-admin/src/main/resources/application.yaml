@@ -5,7 +5,7 @@ spring:
     name: business-behavior-monitor-test-app
   datasource:
     username: root
-    password: 123456
+    password: 123
     url: jdbc:mysql://192.168.136.129:3306/business-behavior-monitor?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=UTC&useSSL=true
     driver-class-name: com.mysql.cj.jdbc.Driver
   hikari:
@@ -22,8 +22,8 @@ spring:
 redis:
   sdk:
     config:
-      host: 192.168.1.108
-      port: 16379
+      host: 192.168.136.129
+      port: 6379
       pool-size: 10
       min-idle-size: 5
       idle-timeout: 30000

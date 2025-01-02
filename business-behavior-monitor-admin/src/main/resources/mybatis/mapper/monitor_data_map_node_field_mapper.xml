@@ -16,4 +16,22 @@
         <result column="update_time" property="updateTime"/>
     </resultMap>
 
+    <select id="queryMonitorDataMapNodeList" resultMap="dataMap"
+            parameterType="cn.cat.monitor.infrastructure.po.MonitorDataMapNodeField">
+        select id,
+               monitor_id,
+               monitor_node_id,
+               log_name,
+               log_index,
+               log_type,
+               attribute_name,
+               attribute_field,
+               attribute_ognl,
+               create_time,
+               update_time
+        from monitor_data_map_node_field
+        where monitor_id = #{monitorId}
+          and monitor_node_id = #{monitorNodeId}
+    </select>
+
 </mapper>

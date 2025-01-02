@@ -10,4 +10,10 @@
         <result column="update_time" property="updateTime"/>
     </resultMap>
 
+    <select id="queryMonitorNameByMonitoryId" parameterType="java.lang.String" resultType="java.lang.String">
+        select monitor_name
+        from monitor_data_map
+        where monitor_id = #{monitorId}
+    </select>
+
 </mapper>

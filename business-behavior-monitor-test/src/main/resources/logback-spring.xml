@@ -103,7 +103,7 @@
     </springProfile>
 
     <appender name="monitor" class="cn.cat.monitor.sdk.appender.CustomAppender">
-        <systemName>big-market</systemName>
+        <systemName>monitor-behaviour-test</systemName>
         <groupId>cn.catapp.monitor</groupId>
         <host>192.168.136.129</host>
         <port>6379</port>
