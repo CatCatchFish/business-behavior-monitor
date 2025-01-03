@@ -1,5 +1,6 @@
 package cn.cat.monitor.domain.service;
 
+import cn.cat.monitor.domain.model.entity.MonitorDataEntity;
 import cn.cat.monitor.domain.model.entity.MonitorDataMapEntity;
 import cn.cat.monitor.domain.model.valobj.MonitorTreeConfigVO;
 import ognl.OgnlException;
@@ -13,5 +14,7 @@ public interface ILogAnalyticalService {
     List<MonitorDataMapEntity> queryMonitorDataMapEntityList();
 
     MonitorTreeConfigVO queryMonitorFlowData(String monitorId);
+
+    List<MonitorDataEntity> queryMonitorDataEntityList(String monitorId, String monitorName, String monitorNodeId);
 
 }

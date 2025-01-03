@@ -176,4 +176,30 @@ public class MonitorRepository implements IMonitorRepository {
                 .build();
     }
 
+    @Override
+    public List<MonitorDataEntity> queryMonitorDataEntityList(MonitorDataEntity monitorDataEntity) {
+        MonitorData monitorDataReq = new MonitorData();
+        monitorDataReq.setMonitorId(monitorDataEntity.getMonitorId());
+        monitorDataReq.setMonitorName(monitorDataEntity.getMonitorName());
+        monitorDataReq.setMonitorNodeId(monitorDataEntity.getMonitorNodeId());
+        List<MonitorData> monitorData = monitorDataDao.queryMonitorDataList(monitorDataReq);
+
+        List<MonitorDataEntity> monitorDataEntities = new ArrayList<>();
+        for (MonitorData data : monitorData) {
+            MonitorDataEntity entity = MonitorDataEntity.builder()
+                    .monitorId(data.getMonitorId())
+                    .monitorName(data.getMonitorName())
+                    .monitorNodeId(data.getMonitorNodeId())
+                    .systemName(data.getSystemName())
+                    .clazzName(data.getClazzName())
+                    .methodName(data.getMethodName())
+                    .attributeName(data.getAttributeName())
+                    .attributeField(data.getAttributeField())
+                    .attributeValue(data.getAttributeValue())
+                    .build();
+            monitorDataEntities.add(entity);
+        }
+        return monitorDataEntities;
+    }
+
 }

@@ -1,8 +1,10 @@
 package cn.cat.monitor.trigger.http;
 
+import cn.cat.monitor.domain.model.entity.MonitorDataEntity;
 import cn.cat.monitor.domain.model.entity.MonitorDataMapEntity;
 import cn.cat.monitor.domain.model.valobj.MonitorTreeConfigVO;
 import cn.cat.monitor.domain.service.ILogAnalyticalService;
+import cn.cat.monitor.trigger.http.dto.MonitorDataDTO;
 import cn.cat.monitor.trigger.http.dto.MonitorDataMapDTO;
 import cn.cat.monitor.trigger.http.dto.MonitorFlowDataDTO;
 import cn.cat.monitor.types.Response;
@@ -91,4 +93,39 @@ public class MonitorController {
                     .build();
         }
     }
+
+    @RequestMapping(value = "query_monitor_data_list", method = RequestMethod.GET)
+    public Response<List<MonitorDataDTO>> queryMonitorDataList(@RequestParam String monitorId, @RequestParam String monitorName, @RequestParam String monitorNodeId) {
+        try {
+            List<MonitorDataEntity> monitorDataEntities = logAnalyticalService.queryMonitorDataEntityList(monitorId, monitorName, monitorNodeId);
+
+            List<MonitorDataDTO> monitorDataDTOS = new ArrayList<>(monitorDataEntities.size());
+            for (MonitorDataEntity monitorDataEntity : monitorDataEntities) {
+                monitorDataDTOS.add(MonitorDataDTO.builder()
+                        .monitorId(monitorDataEntity.getMonitorId())
+                        .monitorName(monitorDataEntity.getMonitorName())
+                        .monitorNodeId(monitorDataEntity.getMonitorNodeId())
+                        .systemName(monitorDataEntity.getSystemName())
+                        .clazzName(monitorDataEntity.getClazzName())
+                        .methodName(monitorDataEntity.getMethodName())
+                        .attributeName(monitorDataEntity.getAttributeName())
+                        .attributeField(monitorDataEntity.getAttributeField())
+                        .attributeValue(monitorDataEntity.getAttributeValue())
+                        .build());
+            }
+            return Response.<List<MonitorDataDTO>>builder()
+                    .code("0000")
+                    .info("调用成功")
+                    .data(monitorDataDTOS)
+                    .build();
+        } catch (Exception e) {
+            log.error("查询监控数据列表失败 monitorId:{} monitorName:{} monitorNodeId:{}", monitorId, monitorName, monitorNodeId, e);
+            return Response.<List<MonitorDataDTO>>builder()
+                    .code("0001")
+                    .info("调用失败")
+                    .build();
+        }
+    }
+
 }
+

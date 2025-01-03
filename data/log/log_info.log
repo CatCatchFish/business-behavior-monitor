@@ -1033,3 +1033,127 @@ Caused by: com.mysql.cj.exceptions.CJException: Access denied for user 'root'@'1
 25-01-02.19:24:53.327 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m9s551ms123µs800ns).
 25-01-02.19:25:17.358 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
 25-01-02.19:25:17.378 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-01-02.21:19:37.742 [main            ] INFO  MonitorApplication     - Starting MonitorApplication using Java 1.8.0_281 on catlap with PID 7432 (D:\WorkSpace\GagaPlus\business-behavior-monitor\business-behavior-monitor-admin\target\classes started by Cat in D:\WorkSpace\GagaPlus\business-behavior-monitor)
+25-01-02.21:19:37.746 [main            ] INFO  MonitorApplication     - No active profile set, falling back to 1 default profile: "default"
+25-01-02.21:19:38.853 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-01-02.21:19:38.859 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-01-02.21:19:38.915 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
+25-01-02.21:19:39.461 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-01-02.21:19:39.462 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.33] using APR version [1.7.0].
+25-01-02.21:19:39.462 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-01-02.21:19:39.462 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-01-02.21:19:39.480 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1o  3 May 2022]
+25-01-02.21:19:39.492 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-01-02.21:19:39.492 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-01-02.21:19:39.493 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-01-02.21:19:39.653 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-01-02.21:19:39.654 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1833 ms
+25-01-02.21:19:40.491 [main            ] INFO  Version                - Redisson 3.26.0
+25-01-02.21:19:41.012 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-02.21:19:41.036 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-02.21:19:41.840 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-01-02.21:19:41.868 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-01-02.21:19:41.879 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-01-02.21:19:41.894 [main            ] INFO  MonitorApplication     - Started MonitorApplication in 5.149 seconds (JVM running for 6.532)
+25-01-02.21:19:42.220 [RMI TCP Connection(1)-192.168.136.1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-01-02.21:19:42.221 [RMI TCP Connection(1)-192.168.136.1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-01-02.21:19:42.222 [RMI TCP Connection(1)-192.168.136.1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-01-02.21:19:42.856 [RMI TCP Connection(3)-192.168.136.1] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-02.21:19:43.575 [RMI TCP Connection(3)-192.168.136.1] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-01-02.21:20:12.654 [redisson-3-7    ] INFO  MonitorLogListener     - 监听监控日志消息，解析存储: {"className":"cn.catapp.monitor.test.ApiTest","logList":["测试日志","10001","李二狗","{\"orderId\":\"109099893222\",\"userAge\":25,\"userId\":\"10001\",\"userName\":\"李二狗\"}"],"methodName":"test_log_02","systemName":"monitor-behaviour-test"}
+25-01-02.21:21:03.537 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-01-02.21:21:03.546 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-01-02.21:26:50.536 [main            ] INFO  MonitorApplication     - Starting MonitorApplication using Java 1.8.0_281 on catlap with PID 23416 (D:\WorkSpace\GagaPlus\business-behavior-monitor\business-behavior-monitor-admin\target\classes started by Cat in D:\WorkSpace\GagaPlus\business-behavior-monitor)
+25-01-02.21:26:50.544 [main            ] INFO  MonitorApplication     - No active profile set, falling back to 1 default profile: "default"
+25-01-02.21:26:52.267 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-01-02.21:26:52.272 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-01-02.21:26:52.315 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+25-01-02.21:26:53.057 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-01-02.21:26:53.059 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.33] using APR version [1.7.0].
+25-01-02.21:26:53.060 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-01-02.21:26:53.060 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-01-02.21:26:53.075 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1o  3 May 2022]
+25-01-02.21:26:53.088 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-01-02.21:26:53.089 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-01-02.21:26:53.090 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-01-02.21:26:53.418 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-01-02.21:26:53.418 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2713 ms
+25-01-02.21:26:54.465 [main            ] INFO  Version                - Redisson 3.26.0
+25-01-02.21:26:56.516 [redisson-netty-1-5] INFO  ConnectionsHolder      - 1 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-02.21:26:56.583 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-02.21:26:58.018 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-01-02.21:26:58.044 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-01-02.21:26:58.055 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-01-02.21:26:58.072 [main            ] INFO  MonitorApplication     - Started MonitorApplication in 8.602 seconds (JVM running for 11.45)
+25-01-02.21:26:58.688 [RMI TCP Connection(4)-192.168.136.1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-01-02.21:26:58.688 [RMI TCP Connection(4)-192.168.136.1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-01-02.21:26:58.690 [RMI TCP Connection(4)-192.168.136.1] INFO  DispatcherServlet      - Completed initialization in 2 ms
+25-01-02.21:26:58.692 [RMI TCP Connection(3)-192.168.136.1] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-02.21:27:00.288 [RMI TCP Connection(3)-192.168.136.1] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-01-02.21:27:25.828 [redisson-3-7    ] INFO  MonitorLogListener     - 监听监控日志消息，解析存储: {"className":"cn.catapp.monitor.test.ApiTest","logList":["测试日志","10001","李二狗","{\"orderId\":\"109099893222\",\"userAge\":25,\"userId\":\"10001\",\"userName\":\"李二狗\"}"],"methodName":"test_log_02","systemName":"monitor-behaviour-test"}
+25-01-02.21:27:46.687 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=46s290ms222µs).
+25-01-02.21:28:47.667 [redisson-3-8    ] INFO  MonitorLogListener     - 监听监控日志消息，解析存储: {"className":"cn.catapp.monitor.test.ApiTest","logList":["测试日志","10001","李二狗","{\"orderId\":\"109099893222\",\"userAge\":25,\"userId\":\"10001\",\"userName\":\"李二狗\"}"],"methodName":"test_log_02","systemName":"monitor-behaviour-test"}
+25-01-02.21:29:35.656 [redisson-3-9    ] INFO  MonitorLogListener     - 监听监控日志消息，解析存储: {"className":"cn.catapp.monitor.test.ApiTest","logList":["测试日志1","10001","李二狗","{\"orderId\":\"109099893222\",\"userAge\":25,\"userId\":\"10001\",\"userName\":\"李二狗\"}"],"methodName":"test_log_02","systemName":"monitor-behaviour-test"}
+25-01-02.21:29:56.581 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-01-02.21:29:56.594 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-01-02.22:28:53.454 [main            ] INFO  MonitorApplication     - Starting MonitorApplication using Java 1.8.0_281 on catlap with PID 5336 (D:\WorkSpace\GagaPlus\business-behavior-monitor\business-behavior-monitor-admin\target\classes started by Cat in D:\WorkSpace\GagaPlus\business-behavior-monitor)
+25-01-02.22:28:53.456 [main            ] INFO  MonitorApplication     - No active profile set, falling back to 1 default profile: "default"
+25-01-02.22:28:54.128 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-01-02.22:28:54.130 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-01-02.22:28:54.151 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+25-01-02.22:28:54.542 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-01-02.22:28:54.543 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.33] using APR version [1.7.0].
+25-01-02.22:28:54.543 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-01-02.22:28:54.544 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-01-02.22:28:54.556 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1o  3 May 2022]
+25-01-02.22:28:54.562 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-01-02.22:28:54.563 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-01-02.22:28:54.563 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-01-02.22:28:54.712 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-01-02.22:28:54.713 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1226 ms
+25-01-02.22:28:55.253 [main            ] INFO  Version                - Redisson 3.26.0
+25-01-02.22:28:55.696 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-02.22:28:55.717 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-02.22:28:56.262 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-01-02.22:28:56.283 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-01-02.22:28:56.291 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-01-02.22:28:56.306 [main            ] INFO  MonitorApplication     - Started MonitorApplication in 3.53 seconds (JVM running for 4.513)
+25-01-02.22:28:56.633 [RMI TCP Connection(1)-192.168.136.1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-01-02.22:28:56.633 [RMI TCP Connection(1)-192.168.136.1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-01-02.22:28:56.634 [RMI TCP Connection(1)-192.168.136.1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-01-02.22:28:57.016 [RMI TCP Connection(3)-192.168.136.1] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-02.22:28:57.725 [RMI TCP Connection(3)-192.168.136.1] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-01-02.22:29:03.657 [http-nio-8091-exec-5] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-02.22:29:17.408 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-01-02.22:29:17.424 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-01-02.22:38:19.209 [main            ] INFO  MonitorApplication     - Starting MonitorApplication using Java 1.8.0_281 on catlap with PID 5528 (D:\WorkSpace\GagaPlus\business-behavior-monitor\business-behavior-monitor-admin\target\classes started by Cat in D:\WorkSpace\GagaPlus\business-behavior-monitor)
+25-01-02.22:38:19.211 [main            ] INFO  MonitorApplication     - No active profile set, falling back to 1 default profile: "default"
+25-01-02.22:38:19.934 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-01-02.22:38:19.936 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-01-02.22:38:19.957 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+25-01-02.22:38:20.299 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-01-02.22:38:20.300 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.33] using APR version [1.7.0].
+25-01-02.22:38:20.300 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-01-02.22:38:20.300 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-01-02.22:38:20.302 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1o  3 May 2022]
+25-01-02.22:38:20.307 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-01-02.22:38:20.308 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-01-02.22:38:20.308 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-01-02.22:38:20.427 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-01-02.22:38:20.427 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1177 ms
+25-01-02.22:38:20.842 [main            ] INFO  Version                - Redisson 3.26.0
+25-01-02.22:38:21.151 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-02.22:38:21.167 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-02.22:38:21.718 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-01-02.22:38:21.751 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-01-02.22:38:21.758 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-01-02.22:38:21.767 [main            ] INFO  MonitorApplication     - Started MonitorApplication in 3.006 seconds (JVM running for 3.844)
+25-01-02.22:38:22.141 [RMI TCP Connection(3)-192.168.136.1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-01-02.22:38:22.141 [RMI TCP Connection(3)-192.168.136.1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-01-02.22:38:22.142 [RMI TCP Connection(3)-192.168.136.1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-01-02.22:38:22.422 [RMI TCP Connection(5)-192.168.136.1] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-02.22:38:22.954 [RMI TCP Connection(5)-192.168.136.1] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-01-02.22:38:34.843 [http-nio-8091-exec-3] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-02.22:50:34.123 [http-nio-8091-exec-9] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-02.22:50:44.301 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-01-02.22:50:44.309 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.

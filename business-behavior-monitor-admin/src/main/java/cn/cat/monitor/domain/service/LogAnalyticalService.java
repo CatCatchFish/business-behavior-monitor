@@ -10,6 +10,7 @@ import com.alibaba.fastjson.JSONObject;
 import ognl.Ognl;
 import ognl.OgnlContext;
 import ognl.OgnlException;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -77,6 +78,15 @@ public class LogAnalyticalService implements ILogAnalyticalService {
     @Override
     public MonitorTreeConfigVO queryMonitorFlowData(String monitorId) {
         return repository.queryMonitorFlowData(monitorId);
+    }
+
+    @Override
+    public List<MonitorDataEntity> queryMonitorDataEntityList(String monitorId, String monitorName, String monitorNodeId) {
+        return repository.queryMonitorDataEntityList(MonitorDataEntity.builder()
+                .monitorId(StringUtils.isEmpty(monitorId) ? null : monitorId)
+                .monitorName(StringUtils.isEmpty(monitorName) ? null : monitorName)
+                .monitorNodeId(StringUtils.isEmpty(monitorNodeId) ? null : monitorNodeId)
+                .build());
     }
 
 }

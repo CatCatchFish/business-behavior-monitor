@@ -53,3 +53,47 @@
 25-01-02.15:42:24.090 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
 25-01-02.15:42:24.212 [main            ] INFO  ApiTest                - Started ApiTest in 6.331 seconds (JVM running for 7.403)
 25-01-02.15:42:25.545 [main            ] INFO  ApiTest                - 测试日志 10001 李二狗 {"orderId":"109099893222","userAge":25,"userId":"10001","userName":"李二狗"}
+25-01-02.21:20:07.871 [main            ] INFO  ApiTest                - Starting ApiTest using Java 1.8.0_281 on catlap with PID 388 (started by Cat in D:\WorkSpace\GagaPlus\business-behavior-monitor\business-behavior-monitor-test)
+25-01-02.21:20:07.875 [main            ] INFO  ApiTest                - No active profile set, falling back to 1 default profile: "default"
+25-01-02.21:20:08.766 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-01-02.21:20:08.770 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-01-02.21:20:08.796 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+25-01-02.21:20:10.668 [main            ] INFO  Version                - Redisson 3.26.0
+25-01-02.21:20:10.751 [redisson-netty-5-6] INFO  ConnectionsHolder      - 1 connections initialized for localhost/127.0.0.1:6379
+25-01-02.21:20:10.877 [redisson-netty-5-20] INFO  ConnectionsHolder      - 24 connections initialized for localhost/127.0.0.1:6379
+25-01-02.21:20:11.536 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-01-02.21:20:11.599 [main            ] INFO  ApiTest                - Started ApiTest in 5.981 seconds (JVM running for 7.283)
+25-01-02.21:20:12.509 [main            ] INFO  ApiTest                - 测试日志 10001 李二狗 {"orderId":"109099893222","userAge":25,"userId":"10001","userName":"李二狗"}
+25-01-02.21:27:18.642 [main            ] INFO  ApiTest                - Starting ApiTest using Java 1.8.0_281 on catlap with PID 23256 (started by Cat in D:\WorkSpace\GagaPlus\business-behavior-monitor\business-behavior-monitor-test)
+25-01-02.21:27:18.647 [main            ] INFO  ApiTest                - No active profile set, falling back to 1 default profile: "default"
+25-01-02.21:27:20.019 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-01-02.21:27:20.023 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-01-02.21:27:20.059 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+25-01-02.21:27:22.689 [main            ] INFO  Version                - Redisson 3.26.0
+25-01-02.21:27:22.784 [redisson-netty-5-5] INFO  ConnectionsHolder      - 1 connections initialized for localhost/127.0.0.1:6379
+25-01-02.21:27:22.912 [redisson-netty-5-20] INFO  ConnectionsHolder      - 24 connections initialized for localhost/127.0.0.1:6379
+25-01-02.21:27:23.775 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-01-02.21:27:23.883 [main            ] INFO  ApiTest                - Started ApiTest in 8.175 seconds (JVM running for 10.586)
+25-01-02.21:27:25.543 [main            ] INFO  ApiTest                - 测试日志 10001 李二狗 {"orderId":"109099893222","userAge":25,"userId":"10001","userName":"李二狗"}
+25-01-02.21:28:42.104 [main            ] INFO  ApiTest                - Starting ApiTest using Java 1.8.0_281 on catlap with PID 11376 (started by Cat in D:\WorkSpace\GagaPlus\business-behavior-monitor\business-behavior-monitor-test)
+25-01-02.21:28:42.107 [main            ] INFO  ApiTest                - No active profile set, falling back to 1 default profile: "default"
+25-01-02.21:28:43.207 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-01-02.21:28:43.211 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-01-02.21:28:43.239 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+25-01-02.21:28:45.464 [main            ] INFO  Version                - Redisson 3.26.0
+25-01-02.21:28:45.576 [redisson-netty-5-6] INFO  ConnectionsHolder      - 1 connections initialized for localhost/127.0.0.1:6379
+25-01-02.21:28:45.690 [redisson-netty-5-20] INFO  ConnectionsHolder      - 24 connections initialized for localhost/127.0.0.1:6379
+25-01-02.21:28:46.406 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-01-02.21:28:46.504 [main            ] INFO  ApiTest                - Started ApiTest in 7.259 seconds (JVM running for 8.931)
+25-01-02.21:28:47.615 [main            ] INFO  ApiTest                - 测试日志 10001 李二狗 {"orderId":"109099893222","userAge":25,"userId":"10001","userName":"李二狗"}
+25-01-02.21:29:30.543 [main            ] INFO  ApiTest                - Starting ApiTest using Java 1.8.0_281 on catlap with PID 7004 (started by Cat in D:\WorkSpace\GagaPlus\business-behavior-monitor\business-behavior-monitor-test)
+25-01-02.21:29:30.547 [main            ] INFO  ApiTest                - No active profile set, falling back to 1 default profile: "default"
+25-01-02.21:29:31.467 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-01-02.21:29:31.471 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-01-02.21:29:31.497 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+25-01-02.21:29:33.453 [main            ] INFO  Version                - Redisson 3.26.0
+25-01-02.21:29:33.570 [redisson-netty-5-5] INFO  ConnectionsHolder      - 1 connections initialized for localhost/127.0.0.1:6379
+25-01-02.21:29:33.743 [redisson-netty-5-20] INFO  ConnectionsHolder      - 24 connections initialized for localhost/127.0.0.1:6379
+25-01-02.21:29:34.454 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-01-02.21:29:34.528 [main            ] INFO  ApiTest                - Started ApiTest in 6.539 seconds (JVM running for 7.9)
+25-01-02.21:29:35.564 [main            ] INFO  ApiTest                - 测试日志1 10001 李二狗 {"orderId":"109099893222","userAge":25,"userId":"10001","userName":"李二狗"}

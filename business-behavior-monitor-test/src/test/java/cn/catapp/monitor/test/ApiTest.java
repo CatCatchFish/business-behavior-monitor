@@ -37,7 +37,7 @@ public class ApiTest {
 
     @Test
     public void test_log_02() throws InterruptedException {
-        log.info("测试日志 {} {} {}", userEntity.getUserId(), userEntity.getUserName(), JSON.toJSONString(userEntity));
+        log.info("测试日志1 {} {} {}", userEntity.getUserId(), userEntity.getUserName(), JSON.toJSONString(userEntity));
 
         new CountDownLatch(1).await();
     }

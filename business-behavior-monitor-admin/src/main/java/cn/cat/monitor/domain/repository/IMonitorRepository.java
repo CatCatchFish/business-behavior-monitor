@@ -19,4 +19,6 @@ public interface IMonitorRepository {
 
     MonitorTreeConfigVO queryMonitorFlowData(String monitorId);
 
+    List<MonitorDataEntity> queryMonitorDataEntityList(MonitorDataEntity monitorDataEntity);
+
 }
