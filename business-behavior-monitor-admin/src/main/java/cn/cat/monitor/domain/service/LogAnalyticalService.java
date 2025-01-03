@@ -2,6 +2,7 @@ package cn.cat.monitor.domain.service;
 
 import cn.cat.monitor.domain.model.entity.MonitorDataEntity;
 import cn.cat.monitor.domain.model.entity.MonitorDataMapEntity;
+import cn.cat.monitor.domain.model.entity.MonitorFlowDesignerEntity;
 import cn.cat.monitor.domain.model.valobj.GatherNodeExpressionVO;
 import cn.cat.monitor.domain.model.valobj.MonitorTreeConfigVO;
 import cn.cat.monitor.domain.repository.IMonitorRepository;
@@ -87,6 +88,11 @@ public class LogAnalyticalService implements ILogAnalyticalService {
                 .monitorName(StringUtils.isEmpty(monitorName) ? null : monitorName)
                 .monitorNodeId(StringUtils.isEmpty(monitorNodeId) ? null : monitorNodeId)
                 .build());
+    }
+
+    @Override
+    public void updateMonitorFlowDesigner(MonitorFlowDesignerEntity monitorFlowDesignerEntity) {
+        repository.updateMonitorFlowDesigner(monitorFlowDesignerEntity);
     }
 
 }

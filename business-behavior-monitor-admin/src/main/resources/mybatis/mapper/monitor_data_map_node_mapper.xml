@@ -25,11 +25,18 @@
           and gather_method_name
             = #{gatherMethodName}
     </select>
-    
+
     <select id="queryMonitoryDataMapNodeByMonitorId" parameterType="java.lang.String" resultMap="dataMap">
         select monitor_node_id, monitor_node_name, loc, color
         from monitor_data_map_node
         where monitor_id = #{monitorId}
     </select>
+
+    <update id="updateNodeConfig" parameterType="cn.cat.monitor.infrastructure.po.MonitorDataMapNode">
+        update monitor_data_map_node
+        set loc = #{loc}
+        where monitor_id = #{monitorId}
+          and monitor_node_id = #{monitorNodeId}
+    </update>
 
 </mapper>

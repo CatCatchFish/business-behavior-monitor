@@ -16,5 +16,18 @@
         from monitor_data_map_node_link
         where monitor_id = #{monitorId}
     </select>
+    
+    <select id="queryNodeLinkByFromAndTo" parameterType="cn.cat.monitor.infrastructure.po.MonitorDataMapNodeLink" resultType="cn.cat.monitor.infrastructure.po.MonitorDataMapNodeLink">
+        select id
+        from monitor_data_map_node_link
+        where from_monitor_node_id = #{fromMonitorNodeId}
+          and to_monitor_node_id = #{toMonitorNodeId}
+          and monitor_id = #{monitorId}
+    </select>
+
+    <insert id="insert" parameterType="cn.cat.monitor.infrastructure.po.MonitorDataMapNodeLink">
+        insert into monitor_data_map_node_link(monitor_id, from_monitor_node_id, to_monitor_node_id)
+        values (#{monitorId}, #{fromMonitorNodeId}, #{toMonitorNodeId})
+    </insert>
 
 </mapper>

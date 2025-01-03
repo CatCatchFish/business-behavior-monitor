@@ -2,6 +2,7 @@ package cn.cat.monitor.trigger.http;
 
 import cn.cat.monitor.domain.model.entity.MonitorDataEntity;
 import cn.cat.monitor.domain.model.entity.MonitorDataMapEntity;
+import cn.cat.monitor.domain.model.entity.MonitorFlowDesignerEntity;
 import cn.cat.monitor.domain.model.valobj.MonitorTreeConfigVO;
 import cn.cat.monitor.domain.service.ILogAnalyticalService;
 import cn.cat.monitor.trigger.http.dto.MonitorDataDTO;
@@ -52,7 +53,6 @@ public class MonitorController {
     @RequestMapping(value = "query_monitor_flow_map", method = RequestMethod.GET)
     public Response<MonitorFlowDataDTO> queryMonitorFlowMap(@RequestParam String monitorId) {
         try {
-            log.info("查询监控流数据 monitorId:{}", monitorId);
             MonitorTreeConfigVO monitorTreeConfigVO = logAnalyticalService.queryMonitorFlowData(monitorId);
 
             List<MonitorTreeConfigVO.Node> nodeList = monitorTreeConfigVO.getNodeList();
@@ -123,6 +123,51 @@ public class MonitorController {
             return Response.<List<MonitorDataDTO>>builder()
                     .code("0001")
                     .info("调用失败")
+                    .build();
+        }
+    }
+
+    @RequestMapping(value = "update_monitor_flow_designer", method = RequestMethod.POST)
+    public Response<Boolean> updateMonitorFlowDesigner(@RequestParam String monitorId, @RequestBody MonitorFlowDataDTO request) {
+        try {
+            log.info("更新监控图配置 monitorId:{}", monitorId);
+            List<MonitorFlowDataDTO.NodeData> nodeDataList = request.getNodeDataArray();
+            List<MonitorFlowDataDTO.LinkData> linkDataList = request.getLinkDataArray();
+
+            List<MonitorFlowDesignerEntity.Node> nodeList = new ArrayList<>();
+            for (MonitorFlowDataDTO.NodeData nodeData : nodeDataList) {
+                nodeList.add(MonitorFlowDesignerEntity.Node.builder()
+                        .monitorNodeId(nodeData.getKey())
+                        .loc(nodeData.getLoc())
+                        .build());
+            }
+
+            List<MonitorFlowDesignerEntity.Link> linkList = new ArrayList<>();
+            for (MonitorFlowDataDTO.LinkData linkData : linkDataList) {
+                linkList.add(MonitorFlowDesignerEntity.Link.builder()
+                        .from(linkData.getFrom())
+                        .to(linkData.getTo())
+                        .build());
+            }
+
+            MonitorFlowDesignerEntity monitorFlowDesignerEntity = MonitorFlowDesignerEntity.builder()
+                    .monitorId(monitorId)
+                    .nodeList(nodeList)
+                    .linkList(linkList)
+                    .build();
+
+            logAnalyticalService.updateMonitorFlowDesigner(monitorFlowDesignerEntity);
+            return Response.<Boolean>builder()
+                    .code("0000")
+                    .info("调用成功")
+                    .data(true)
+                    .build();
+        } catch (Exception e) {
+            log.error("更新监控图配置失败 monitorId:{}", monitorId, e);
+            return Response.<Boolean>builder()
+                    .code("0001")
+                    .info("调用失败")
+                    .data(true)
                     .build();
         }
     }

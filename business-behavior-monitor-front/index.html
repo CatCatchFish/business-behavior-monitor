@@ -5,11 +5,11 @@
 	<meta name="description" content=""/>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-	<script src="js/jquery.min.js"></script>
-	<script src="js/layer/layer.js"></script>
-	<script src="js/go.js"></script>
-	<script src="js/flow-desinger.js"></script>
-	<script src="js/flow-display.js"></script>
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/layer/layer.js"></script>
+	<script src="./js/go.js"></script>
+	<script src="./js/flow-desinger.js"></script>
+	<script src="./js/flow-display.js"></script>
 	<style>
     body {
       font-family: Arial, sans-serif;
@@ -127,6 +127,7 @@
 	<div>
 		<h1>监控地图</h1>
 		<div id="monitorDisplayPanel"></div>
+		<button id="update">更新流程图</button>
 	</div>
 
 	<div>
@@ -182,7 +183,7 @@
     fetchData(monitorId);
 
     // Set interval to fetch data every 5 seconds
-    //setInterval(fetchData, 5000);
+    setInterval(() => fetchData(monitorId), 5000);
 
     // Fetch initial monitor data
     fetchMonitorData(monitorId);
@@ -195,6 +196,10 @@
       const monitorNodeId = document.getElementById('monitorNodeId').value;
 
       fetchMonitorData(monitorId, monitorName, monitorNodeId);
+    });
+
+    document.getElementById('update').addEventListener('click', function(event) {
+      window.open("update.html?monitorId=" + monitorId, '_blank');
     });
   });
 

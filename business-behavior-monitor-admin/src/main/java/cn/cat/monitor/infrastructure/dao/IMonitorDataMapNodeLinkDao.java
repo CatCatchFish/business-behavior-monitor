@@ -10,4 +10,8 @@ public interface IMonitorDataMapNodeLinkDao {
 
     List<MonitorDataMapNodeLink> queryMonitorDataMapNodeLinkByMonitorId(String monitorId);
 
+    MonitorDataMapNodeLink queryNodeLinkByFromAndTo(MonitorDataMapNodeLink monitorDataMapNodeLink);
+
+    void insert(MonitorDataMapNodeLink monitorDataMapNodeLink);
+
 }

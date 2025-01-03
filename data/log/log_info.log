@@ -1157,3 +1157,1547 @@ Caused by: com.mysql.cj.exceptions.CJException: Access denied for user 'root'@'1
 25-01-02.22:50:34.123 [http-nio-8091-exec-9] INFO  MonitorController      - 查询监控流数据 monitorId:111
 25-01-02.22:50:44.301 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
 25-01-02.22:50:44.309 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-01-03.13:30:22.021 [main            ] INFO  MonitorApplication     - Starting MonitorApplication using Java 1.8.0_281 on catlap with PID 8636 (D:\WorkSpace\GagaPlus\business-behavior-monitor\business-behavior-monitor-admin\target\classes started by Cat in D:\WorkSpace\GagaPlus\business-behavior-monitor)
+25-01-03.13:30:22.025 [main            ] INFO  MonitorApplication     - No active profile set, falling back to 1 default profile: "default"
+25-01-03.13:30:23.301 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-01-03.13:30:23.306 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-01-03.13:30:23.356 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+25-01-03.13:30:24.049 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-01-03.13:30:24.050 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.33] using APR version [1.7.0].
+25-01-03.13:30:24.050 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-01-03.13:30:24.051 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-01-03.13:30:24.052 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1o  3 May 2022]
+25-01-03.13:30:24.060 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-01-03.13:30:24.060 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-01-03.13:30:24.060 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-01-03.13:30:24.209 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-01-03.13:30:24.209 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2106 ms
+25-01-03.13:30:24.748 [main            ] INFO  Version                - Redisson 3.26.0
+25-01-03.13:30:48.310 [main            ] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'logAnalyticalService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'monitorRepository': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonClient' defined in class path resource [cn/cat/monitor/MonitorApplication$RedisClientConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redissonClient' threw exception; nested exception is org.redisson.client.RedisConnectionException: java.util.concurrent.ExecutionException: org.redisson.client.RedisConnectionException: Unable to connect to Redis server: 192.168.136.129/192.168.136.129:6379
+25-01-03.13:30:48.326 [main            ] INFO  StandardService        - Stopping service [Tomcat]
+25-01-03.13:30:48.358 [main            ] INFO  ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+25-01-03.13:30:48.438 [main            ] ERROR SpringApplication      - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'logAnalyticalService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'monitorRepository': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonClient' defined in class path resource [cn/cat/monitor/MonitorApplication$RedisClientConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redissonClient' threw exception; nested exception is org.redisson.client.RedisConnectionException: java.util.concurrent.ExecutionException: org.redisson.client.RedisConnectionException: Unable to connect to Redis server: 192.168.136.129/192.168.136.129:6379
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at cn.cat.monitor.MonitorApplication.main(MonitorApplication.java:25)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'monitorRepository': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonClient' defined in class path resource [cn/cat/monitor/MonitorApplication$RedisClientConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redissonClient' threw exception; nested exception is org.redisson.client.RedisConnectionException: java.util.concurrent.ExecutionException: org.redisson.client.RedisConnectionException: Unable to connect to Redis server: 192.168.136.129/192.168.136.129:6379
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:544)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
+	... 17 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonClient' defined in class path resource [cn/cat/monitor/MonitorApplication$RedisClientConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redissonClient' threw exception; nested exception is org.redisson.client.RedisConnectionException: java.util.concurrent.ExecutionException: org.redisson.client.RedisConnectionException: Unable to connect to Redis server: 192.168.136.129/192.168.136.129:6379
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:544)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
+	... 33 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonClient' defined in class path resource [cn/cat/monitor/MonitorApplication$RedisClientConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redissonClient' threw exception; nested exception is org.redisson.client.RedisConnectionException: java.util.concurrent.ExecutionException: org.redisson.client.RedisConnectionException: Unable to connect to Redis server: 192.168.136.129/192.168.136.129:6379
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:479)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:550)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
+	... 49 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redissonClient' threw exception; nested exception is org.redisson.client.RedisConnectionException: java.util.concurrent.ExecutionException: org.redisson.client.RedisConnectionException: Unable to connect to Redis server: 192.168.136.129/192.168.136.129:6379
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 65 common frames omitted
+Caused by: org.redisson.client.RedisConnectionException: java.util.concurrent.ExecutionException: org.redisson.client.RedisConnectionException: Unable to connect to Redis server: 192.168.136.129/192.168.136.129:6379
+	at org.redisson.connection.MasterSlaveConnectionManager.doConnect(MasterSlaveConnectionManager.java:229)
+	at org.redisson.connection.MasterSlaveConnectionManager.connect(MasterSlaveConnectionManager.java:196)
+	at org.redisson.config.ConfigSupport.createConnectionManager(ConfigSupport.java:220)
+	at org.redisson.Redisson.<init>(Redisson.java:71)
+	at org.redisson.Redisson.create(Redisson.java:116)
+	at cn.cat.monitor.MonitorApplication$RedisClientConfig.redissonClient(MonitorApplication.java:50)
+	at cn.cat.monitor.MonitorApplication$RedisClientConfig$$EnhancerBySpringCGLIB$$c8aef817.CGLIB$redissonClient$0(<generated>)
+	at cn.cat.monitor.MonitorApplication$RedisClientConfig$$EnhancerBySpringCGLIB$$c8aef817$$FastClassBySpringCGLIB$$a3a4161.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at cn.cat.monitor.MonitorApplication$RedisClientConfig$$EnhancerBySpringCGLIB$$c8aef817.redissonClient(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 66 common frames omitted
+Caused by: java.util.concurrent.ExecutionException: org.redisson.client.RedisConnectionException: Unable to connect to Redis server: 192.168.136.129/192.168.136.129:6379
+	at java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:357)
+	at java.util.concurrent.CompletableFuture.get(CompletableFuture.java:1928)
+	at org.redisson.connection.MasterSlaveConnectionManager.doConnect(MasterSlaveConnectionManager.java:225)
+	... 81 common frames omitted
+Caused by: org.redisson.client.RedisConnectionException: Unable to connect to Redis server: 192.168.136.129/192.168.136.129:6379
+	at org.redisson.connection.ConnectionsHolder.lambda$createConnection$1(ConnectionsHolder.java:183)
+	at java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:774)
+	at java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:750)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1990)
+	at org.redisson.connection.ConnectionsHolder.promiseFailure(ConnectionsHolder.java:218)
+	at org.redisson.connection.ConnectionsHolder.lambda$createConnection$4(ConnectionsHolder.java:204)
+	at java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:774)
+	at java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:750)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1990)
+	at org.redisson.client.RedisClient$1$2.run(RedisClient.java:308)
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.util.concurrent.CompletionException: io.netty.channel.ConnectTimeoutException: connection timed out: 192.168.136.129/192.168.136.129:6379
+	at java.util.concurrent.CompletableFuture.encodeRelay(CompletableFuture.java:326)
+	at java.util.concurrent.CompletableFuture.completeRelay(CompletableFuture.java:338)
+	at java.util.concurrent.CompletableFuture.uniRelay(CompletableFuture.java:925)
+	at java.util.concurrent.CompletableFuture$UniRelay.tryFire(CompletableFuture.java:913)
+	... 11 common frames omitted
+Caused by: io.netty.channel.ConnectTimeoutException: connection timed out: 192.168.136.129/192.168.136.129:6379
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe$1.run(AbstractNioChannel.java:261)
+	at io.netty.util.concurrent.PromiseTask.runTask(PromiseTask.java:98)
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:153)
+	... 8 common frames omitted
+25-01-03.13:32:04.128 [main            ] INFO  MonitorApplication     - Starting MonitorApplication using Java 1.8.0_281 on catlap with PID 18416 (D:\WorkSpace\GagaPlus\business-behavior-monitor\business-behavior-monitor-admin\target\classes started by Cat in D:\WorkSpace\GagaPlus\business-behavior-monitor)
+25-01-03.13:32:04.130 [main            ] INFO  MonitorApplication     - No active profile set, falling back to 1 default profile: "default"
+25-01-03.13:32:04.824 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-01-03.13:32:04.826 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-01-03.13:32:04.854 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+25-01-03.13:32:05.234 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-01-03.13:32:05.235 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.33] using APR version [1.7.0].
+25-01-03.13:32:05.235 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-01-03.13:32:05.235 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-01-03.13:32:05.237 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1o  3 May 2022]
+25-01-03.13:32:05.242 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-01-03.13:32:05.242 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-01-03.13:32:05.242 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-01-03.13:32:05.346 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-01-03.13:32:05.346 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1183 ms
+25-01-03.13:32:05.817 [main            ] INFO  Version                - Redisson 3.26.0
+25-01-03.13:32:06.234 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-03.13:32:06.265 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-03.13:32:07.022 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-01-03.13:32:07.053 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-01-03.13:32:07.066 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-01-03.13:32:07.082 [main            ] INFO  MonitorApplication     - Started MonitorApplication in 3.412 seconds (JVM running for 4.643)
+25-01-03.13:32:07.597 [RMI TCP Connection(1)-192.168.136.1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-01-03.13:32:07.597 [RMI TCP Connection(1)-192.168.136.1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-01-03.13:32:07.598 [RMI TCP Connection(1)-192.168.136.1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-01-03.13:32:08.016 [RMI TCP Connection(3)-192.168.136.1] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-03.13:32:19.296 [RMI TCP Connection(3)-192.168.136.1] ERROR HikariPool             - HikariPool-1 - Exception during pool initialization.
+java.sql.SQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:906)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:831)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:159)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:117)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:330)
+	at org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator.getProduct(DataSourceHealthIndicator.java:122)
+	at org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator.doDataSourceHealthCheck(DataSourceHealthIndicator.java:105)
+	at org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator.doHealthCheck(DataSourceHealthIndicator.java:100)
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82)
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:94)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:41)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getLoggedHealth(HealthEndpointSupport.java:172)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:145)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateContribution(HealthEndpointSupport.java:156)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:141)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:110)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:81)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:88)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282)
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74)
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:124)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:97)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:819)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+	at javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1468)
+	at javax.management.remote.rmi.RMIConnectionImpl.access$300(RMIConnectionImpl.java:76)
+	at javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1309)
+	at javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1401)
+	at javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at sun.reflect.GeneratedMethodAccessor12.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:357)
+	at sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:573)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:834)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:688)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:687)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:144)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:850)
+	... 62 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
+	... 64 common frames omitted
+25-01-03.13:32:19.299 [RMI TCP Connection(3)-192.168.136.1] WARN  DataSourceHealthIndicator - DataSource health check failed
+org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:83)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:330)
+	at org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator.getProduct(DataSourceHealthIndicator.java:122)
+	at org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator.doDataSourceHealthCheck(DataSourceHealthIndicator.java:105)
+	at org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator.doHealthCheck(DataSourceHealthIndicator.java:100)
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82)
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:94)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:41)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getLoggedHealth(HealthEndpointSupport.java:172)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:145)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateContribution(HealthEndpointSupport.java:156)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:141)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:110)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:81)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:88)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282)
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74)
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:124)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:97)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:819)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+	at javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1468)
+	at javax.management.remote.rmi.RMIConnectionImpl.access$300(RMIConnectionImpl.java:76)
+	at javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1309)
+	at javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1401)
+	at javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at sun.reflect.GeneratedMethodAccessor12.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:357)
+	at sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:573)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:834)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:688)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:687)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.sql.SQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:906)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:831)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:159)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:117)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80)
+	... 48 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:144)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:850)
+	... 62 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
+	... 64 common frames omitted
+25-01-03.13:32:19.302 [RMI TCP Connection(3)-192.168.136.1] WARN  HealthEndpointSupport  - Health contributor org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator (db) took 11288ms to respond
+25-01-03.13:32:29.686 [main            ] INFO  MonitorApplication     - Starting MonitorApplication using Java 1.8.0_281 on catlap with PID 4968 (D:\WorkSpace\GagaPlus\business-behavior-monitor\business-behavior-monitor-admin\target\classes started by Cat in D:\WorkSpace\GagaPlus\business-behavior-monitor)
+25-01-03.13:32:29.693 [main            ] INFO  MonitorApplication     - No active profile set, falling back to 1 default profile: "default"
+25-01-03.13:32:30.854 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-01-03.13:32:30.856 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-01-03.13:32:30.885 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+25-01-03.13:32:31.453 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-01-03.13:32:31.461 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.33] using APR version [1.7.0].
+25-01-03.13:32:31.462 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-01-03.13:32:31.462 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-01-03.13:32:31.465 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1o  3 May 2022]
+25-01-03.13:32:31.473 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-01-03.13:32:31.474 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-01-03.13:32:31.474 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-01-03.13:32:31.630 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-01-03.13:32:31.630 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1863 ms
+25-01-03.13:32:32.357 [main            ] INFO  Version                - Redisson 3.26.0
+25-01-03.13:32:32.807 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-03.13:32:32.858 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-03.13:32:33.528 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-01-03.13:32:33.547 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-01-03.13:32:33.555 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-01-03.13:32:33.566 [main            ] INFO  MonitorApplication     - Started MonitorApplication in 4.69 seconds (JVM running for 6.221)
+25-01-03.13:32:34.027 [RMI TCP Connection(1)-192.168.136.1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-01-03.13:32:34.027 [RMI TCP Connection(1)-192.168.136.1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-01-03.13:32:34.029 [RMI TCP Connection(1)-192.168.136.1] INFO  DispatcherServlet      - Completed initialization in 2 ms
+25-01-03.13:32:34.029 [RMI TCP Connection(2)-192.168.136.1] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-03.13:32:45.256 [RMI TCP Connection(2)-192.168.136.1] ERROR HikariPool             - HikariPool-1 - Exception during pool initialization.
+java.sql.SQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:906)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:831)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:159)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:117)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:330)
+	at org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator.getProduct(DataSourceHealthIndicator.java:122)
+	at org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator.doDataSourceHealthCheck(DataSourceHealthIndicator.java:105)
+	at org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator.doHealthCheck(DataSourceHealthIndicator.java:100)
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82)
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:94)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:41)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getLoggedHealth(HealthEndpointSupport.java:172)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:145)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateContribution(HealthEndpointSupport.java:156)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:141)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:110)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:81)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:88)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282)
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74)
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:124)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:97)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:819)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+	at javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1468)
+	at javax.management.remote.rmi.RMIConnectionImpl.access$300(RMIConnectionImpl.java:76)
+	at javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1309)
+	at javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1401)
+	at javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at sun.reflect.GeneratedMethodAccessor12.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:357)
+	at sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:573)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:834)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:688)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:687)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:144)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:850)
+	... 62 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
+	... 64 common frames omitted
+25-01-03.13:32:45.258 [RMI TCP Connection(2)-192.168.136.1] WARN  DataSourceHealthIndicator - DataSource health check failed
+org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:83)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:330)
+	at org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator.getProduct(DataSourceHealthIndicator.java:122)
+	at org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator.doDataSourceHealthCheck(DataSourceHealthIndicator.java:105)
+	at org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator.doHealthCheck(DataSourceHealthIndicator.java:100)
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82)
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:94)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:41)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getLoggedHealth(HealthEndpointSupport.java:172)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:145)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateContribution(HealthEndpointSupport.java:156)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:141)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:110)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:81)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:88)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282)
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74)
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:124)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:97)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:819)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+	at javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1468)
+	at javax.management.remote.rmi.RMIConnectionImpl.access$300(RMIConnectionImpl.java:76)
+	at javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1309)
+	at javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1401)
+	at javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at sun.reflect.GeneratedMethodAccessor12.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:357)
+	at sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:573)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:834)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:688)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:687)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.sql.SQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:906)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:831)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:159)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:117)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80)
+	... 48 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:144)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:850)
+	... 62 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
+	... 64 common frames omitted
+25-01-03.13:32:45.260 [RMI TCP Connection(2)-192.168.136.1] WARN  HealthEndpointSupport  - Health contributor org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator (db) took 11232ms to respond
+25-01-03.13:32:54.589 [main            ] INFO  MonitorApplication     - Starting MonitorApplication using Java 1.8.0_281 on catlap with PID 13480 (D:\WorkSpace\GagaPlus\business-behavior-monitor\business-behavior-monitor-admin\target\classes started by Cat in D:\WorkSpace\GagaPlus\business-behavior-monitor)
+25-01-03.13:32:54.592 [main            ] INFO  MonitorApplication     - No active profile set, falling back to 1 default profile: "default"
+25-01-03.13:32:55.206 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-01-03.13:32:55.208 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-01-03.13:32:55.223 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+25-01-03.13:32:55.504 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-01-03.13:32:55.505 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.33] using APR version [1.7.0].
+25-01-03.13:32:55.505 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-01-03.13:32:55.505 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-01-03.13:32:55.507 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1o  3 May 2022]
+25-01-03.13:32:55.510 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-01-03.13:32:55.510 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-01-03.13:32:55.510 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-01-03.13:32:55.595 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-01-03.13:32:55.595 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 962 ms
+25-01-03.13:32:56.050 [main            ] INFO  Version                - Redisson 3.26.0
+25-01-03.13:32:56.448 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-03.13:32:56.468 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-03.13:32:57.011 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-01-03.13:32:57.032 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-01-03.13:32:57.040 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-01-03.13:32:57.053 [main            ] INFO  MonitorApplication     - Started MonitorApplication in 2.864 seconds (JVM running for 3.543)
+25-01-03.13:32:57.319 [RMI TCP Connection(1)-192.168.136.1] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-03.13:32:57.680 [RMI TCP Connection(3)-192.168.136.1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-01-03.13:32:57.680 [RMI TCP Connection(3)-192.168.136.1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-01-03.13:32:57.681 [RMI TCP Connection(3)-192.168.136.1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-01-03.13:33:10.024 [RMI TCP Connection(1)-192.168.136.1] ERROR HikariPool             - HikariPool-1 - Exception during pool initialization.
+java.sql.SQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:906)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:831)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:159)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:117)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:330)
+	at org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator.getProduct(DataSourceHealthIndicator.java:122)
+	at org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator.doDataSourceHealthCheck(DataSourceHealthIndicator.java:105)
+	at org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator.doHealthCheck(DataSourceHealthIndicator.java:100)
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82)
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:94)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:41)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getLoggedHealth(HealthEndpointSupport.java:172)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:145)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateContribution(HealthEndpointSupport.java:156)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:141)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:110)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:81)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:88)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282)
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74)
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:124)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:97)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:819)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+	at javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1468)
+	at javax.management.remote.rmi.RMIConnectionImpl.access$300(RMIConnectionImpl.java:76)
+	at javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1309)
+	at javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1401)
+	at javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:357)
+	at sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:573)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:834)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:688)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:687)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:144)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:850)
+	... 63 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
+	... 65 common frames omitted
+25-01-03.13:33:10.026 [RMI TCP Connection(1)-192.168.136.1] WARN  DataSourceHealthIndicator - DataSource health check failed
+org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:83)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:330)
+	at org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator.getProduct(DataSourceHealthIndicator.java:122)
+	at org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator.doDataSourceHealthCheck(DataSourceHealthIndicator.java:105)
+	at org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator.doHealthCheck(DataSourceHealthIndicator.java:100)
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82)
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:94)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:41)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getLoggedHealth(HealthEndpointSupport.java:172)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:145)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateContribution(HealthEndpointSupport.java:156)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:141)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:110)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:81)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:88)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282)
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74)
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:124)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:97)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:819)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+	at javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1468)
+	at javax.management.remote.rmi.RMIConnectionImpl.access$300(RMIConnectionImpl.java:76)
+	at javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1309)
+	at javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1401)
+	at javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:357)
+	at sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:573)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:834)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:688)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:687)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.sql.SQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:906)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:831)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:159)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:117)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80)
+	... 49 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:144)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:850)
+	... 63 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
+	... 65 common frames omitted
+25-01-03.13:33:10.029 [RMI TCP Connection(1)-192.168.136.1] WARN  HealthEndpointSupport  - Health contributor org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator (db) took 12709ms to respond
+25-01-03.14:35:10.481 [main            ] INFO  MonitorApplication     - Starting MonitorApplication using Java 1.8.0_281 on catlap with PID 8584 (D:\WorkSpace\GagaPlus\business-behavior-monitor\business-behavior-monitor-admin\target\classes started by Cat in D:\WorkSpace\GagaPlus\business-behavior-monitor)
+25-01-03.14:35:10.486 [main            ] INFO  MonitorApplication     - No active profile set, falling back to 1 default profile: "default"
+25-01-03.14:35:11.808 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-01-03.14:35:11.812 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-01-03.14:35:11.859 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
+25-01-03.14:35:12.738 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-01-03.14:35:12.741 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.33] using APR version [1.7.0].
+25-01-03.14:35:12.741 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-01-03.14:35:12.741 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-01-03.14:35:12.745 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1o  3 May 2022]
+25-01-03.14:35:12.753 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-01-03.14:35:12.754 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-01-03.14:35:12.754 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-01-03.14:35:13.081 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-01-03.14:35:13.081 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2527 ms
+25-01-03.14:35:13.890 [main            ] INFO  Version                - Redisson 3.26.0
+25-01-03.14:35:14.399 [redisson-netty-1-5] INFO  ConnectionsHolder      - 1 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-03.14:35:14.419 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-03.14:35:15.198 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-01-03.14:35:15.235 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-01-03.14:35:15.243 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-01-03.14:35:15.256 [main            ] INFO  MonitorApplication     - Started MonitorApplication in 5.654 seconds (JVM running for 7.943)
+25-01-03.14:35:15.400 [RMI TCP Connection(3)-192.168.136.1] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-03.14:35:15.756 [RMI TCP Connection(5)-192.168.136.1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-01-03.14:35:15.756 [RMI TCP Connection(5)-192.168.136.1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-01-03.14:35:15.758 [RMI TCP Connection(5)-192.168.136.1] INFO  DispatcherServlet      - Completed initialization in 2 ms
+25-01-03.14:35:16.376 [RMI TCP Connection(3)-192.168.136.1] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-01-03.14:35:36.275 [redisson-3-7    ] INFO  MonitorLogListener     - 监听监控日志消息，解析存储: {"className":"cn.catapp.monitor.test.ApiTest","logList":["测试日志","10001","李二狗","{\"orderId\":\"109099893222\",\"userAge\":25,\"userId\":\"10001\",\"userName\":\"李二狗\"}"],"methodName":"test_log_01","systemName":"monitor-behaviour-test"}
+25-01-03.14:36:03.085 [redisson-3-8    ] INFO  MonitorLogListener     - 监听监控日志消息，解析存储: {"className":"cn.catapp.monitor.test.ApiTest","logList":["测试日志","10001","李二狗","{\"orderId\":\"109099893222\",\"userAge\":25,\"userId\":\"10001\",\"userName\":\"李二狗\"}"],"methodName":"test_log_01","systemName":"monitor-behaviour-test"}
+25-01-03.14:36:21.079 [redisson-3-9    ] INFO  MonitorLogListener     - 监听监控日志消息，解析存储: {"className":"cn.catapp.monitor.test.ApiTest","logList":["测试日志1","10001","李二狗","{\"orderId\":\"109099893222\",\"userAge\":25,\"userId\":\"10001\",\"userName\":\"李二狗\"}"],"methodName":"test_log_02","systemName":"monitor-behaviour-test"}
+25-01-03.14:36:32.263 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-01-03.14:36:32.276 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-01-03.14:37:38.002 [main            ] INFO  MonitorApplication     - Starting MonitorApplication using Java 1.8.0_281 on catlap with PID 22168 (D:\WorkSpace\GagaPlus\business-behavior-monitor\business-behavior-monitor-admin\target\classes started by Cat in D:\WorkSpace\GagaPlus\business-behavior-monitor)
+25-01-03.14:37:38.006 [main            ] INFO  MonitorApplication     - No active profile set, falling back to 1 default profile: "default"
+25-01-03.14:37:38.567 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-01-03.14:37:38.569 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-01-03.14:37:38.585 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+25-01-03.14:37:38.863 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-01-03.14:37:38.872 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.33] using APR version [1.7.0].
+25-01-03.14:37:38.872 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-01-03.14:37:38.872 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-01-03.14:37:38.876 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1o  3 May 2022]
+25-01-03.14:37:38.884 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-01-03.14:37:38.885 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-01-03.14:37:38.885 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-01-03.14:37:39.040 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-01-03.14:37:39.040 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 992 ms
+25-01-03.14:37:39.380 [main            ] INFO  Version                - Redisson 3.26.0
+25-01-03.14:37:39.672 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-03.14:37:39.693 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-03.14:37:40.157 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-01-03.14:37:40.180 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-01-03.14:37:40.186 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-01-03.14:37:40.197 [main            ] INFO  MonitorApplication     - Started MonitorApplication in 2.564 seconds (JVM running for 3.258)
+25-01-03.14:37:40.554 [RMI TCP Connection(2)-192.168.136.1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-01-03.14:37:40.554 [RMI TCP Connection(2)-192.168.136.1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-01-03.14:37:40.555 [RMI TCP Connection(2)-192.168.136.1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-01-03.14:37:40.555 [RMI TCP Connection(1)-192.168.136.1] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-03.14:37:40.872 [RMI TCP Connection(1)-192.168.136.1] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-01-03.14:37:52.050 [redisson-3-7    ] INFO  MonitorLogListener     - 监听监控日志消息，解析存储: {"className":"cn.catapp.monitor.test.ApiTest","logList":["测试日志1","10001","李二狗","{\"orderId\":\"109099893222\",\"userAge\":25,\"userId\":\"10001\",\"userName\":\"李二狗\"}"],"methodName":"test_log_02","systemName":"monitor-behaviour-test"}
+25-01-03.14:38:08.061 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-01-03.14:38:08.065 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-01-03.14:38:36.790 [main            ] INFO  MonitorApplication     - Starting MonitorApplication using Java 1.8.0_281 on catlap with PID 21944 (D:\WorkSpace\GagaPlus\business-behavior-monitor\business-behavior-monitor-admin\target\classes started by Cat in D:\WorkSpace\GagaPlus\business-behavior-monitor)
+25-01-03.14:38:36.792 [main            ] INFO  MonitorApplication     - No active profile set, falling back to 1 default profile: "default"
+25-01-03.14:38:37.365 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-01-03.14:38:37.366 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-01-03.14:38:37.390 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+25-01-03.14:38:37.715 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-01-03.14:38:37.716 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.33] using APR version [1.7.0].
+25-01-03.14:38:37.716 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-01-03.14:38:37.716 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-01-03.14:38:37.718 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1o  3 May 2022]
+25-01-03.14:38:37.725 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-01-03.14:38:37.725 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-01-03.14:38:37.725 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-01-03.14:38:37.829 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-01-03.14:38:37.829 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1004 ms
+25-01-03.14:38:38.221 [main            ] INFO  Version                - Redisson 3.26.0
+25-01-03.14:38:38.475 [redisson-netty-1-5] INFO  ConnectionsHolder      - 1 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-03.14:38:38.488 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-03.14:38:38.918 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-01-03.14:38:38.936 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-01-03.14:38:38.942 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-01-03.14:38:38.953 [main            ] INFO  MonitorApplication     - Started MonitorApplication in 2.563 seconds (JVM running for 3.224)
+25-01-03.14:38:39.636 [RMI TCP Connection(1)-192.168.136.1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-01-03.14:38:39.636 [RMI TCP Connection(1)-192.168.136.1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-01-03.14:38:39.637 [RMI TCP Connection(2)-192.168.136.1] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-03.14:38:39.638 [RMI TCP Connection(1)-192.168.136.1] INFO  DispatcherServlet      - Completed initialization in 2 ms
+25-01-03.14:38:40.035 [RMI TCP Connection(2)-192.168.136.1] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-01-03.14:38:53.096 [redisson-3-7    ] INFO  MonitorLogListener     - 监听监控日志消息，解析存储: {"className":"cn.catapp.monitor.test.ApiTest","logList":["测试日志1","10001","李二狗","{\"orderId\":\"109099893222\",\"userAge\":25,\"userId\":\"10001\",\"userName\":\"李二狗\"}"],"methodName":"test_log_02","systemName":"monitor-behaviour-test"}
+25-01-03.14:39:48.709 [redisson-3-8    ] INFO  MonitorLogListener     - 监听监控日志消息，解析存储: {"className":"cn.catapp.monitor.test.ApiTest","logList":["测试日志1","10001","李二狗","{\"orderId\":\"109099893222\",\"userAge\":25,\"userId\":\"10001\",\"userName\":\"李二狗\"}"],"methodName":"test_log_02","systemName":"monitor-behaviour-test"}
+25-01-03.14:40:02.093 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-01-03.14:40:02.105 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-01-03.14:40:39.535 [main            ] INFO  MonitorApplication     - Starting MonitorApplication using Java 1.8.0_281 on catlap with PID 4328 (D:\WorkSpace\GagaPlus\business-behavior-monitor\business-behavior-monitor-admin\target\classes started by Cat in D:\WorkSpace\GagaPlus\business-behavior-monitor)
+25-01-03.14:40:39.537 [main            ] INFO  MonitorApplication     - No active profile set, falling back to 1 default profile: "default"
+25-01-03.14:40:40.035 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-01-03.14:40:40.036 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-01-03.14:40:40.052 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+25-01-03.14:40:40.316 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-01-03.14:40:40.316 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.33] using APR version [1.7.0].
+25-01-03.14:40:40.316 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-01-03.14:40:40.318 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-01-03.14:40:40.319 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1o  3 May 2022]
+25-01-03.14:40:40.323 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-01-03.14:40:40.323 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-01-03.14:40:40.323 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-01-03.14:40:40.428 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-01-03.14:40:40.428 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 869 ms
+25-01-03.14:40:40.823 [main            ] INFO  Version                - Redisson 3.26.0
+25-01-03.14:40:41.153 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-03.14:40:41.180 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-03.14:40:41.698 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-01-03.14:40:41.724 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-01-03.14:40:41.731 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-01-03.14:40:41.741 [main            ] INFO  MonitorApplication     - Started MonitorApplication in 2.538 seconds (JVM running for 3.276)
+25-01-03.14:40:42.001 [RMI TCP Connection(1)-192.168.136.1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-01-03.14:40:42.001 [RMI TCP Connection(1)-192.168.136.1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-01-03.14:40:42.002 [RMI TCP Connection(1)-192.168.136.1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-01-03.14:40:42.003 [RMI TCP Connection(2)-192.168.136.1] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-03.14:40:42.462 [RMI TCP Connection(2)-192.168.136.1] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-01-03.14:40:56.158 [redisson-3-7    ] INFO  MonitorLogListener     - 监听监控日志消息，解析存储: {"className":"cn.catapp.monitor.test.ApiTest","logList":["测试日志1","10001","李二狗","{\"orderId\":\"109099893222\",\"userAge\":25,\"userId\":\"10001\",\"userName\":\"李二狗\"}"],"methodName":"test_log_02","systemName":"monitor-behaviour-test"}
+25-01-03.14:41:07.485 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-01-03.14:41:07.496 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-01-03.14:42:09.652 [main            ] INFO  MonitorApplication     - Starting MonitorApplication using Java 1.8.0_281 on catlap with PID 13248 (D:\WorkSpace\GagaPlus\business-behavior-monitor\business-behavior-monitor-admin\target\classes started by Cat in D:\WorkSpace\GagaPlus\business-behavior-monitor)
+25-01-03.14:42:09.653 [main            ] INFO  MonitorApplication     - No active profile set, falling back to 1 default profile: "default"
+25-01-03.14:42:10.325 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-01-03.14:42:10.326 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-01-03.14:42:10.345 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+25-01-03.14:42:10.693 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-01-03.14:42:10.693 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.33] using APR version [1.7.0].
+25-01-03.14:42:10.693 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-01-03.14:42:10.694 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-01-03.14:42:10.695 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1o  3 May 2022]
+25-01-03.14:42:10.700 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-01-03.14:42:10.700 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-01-03.14:42:10.700 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-01-03.14:42:10.811 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-01-03.14:42:10.812 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1129 ms
+25-01-03.14:42:11.266 [main            ] INFO  Version                - Redisson 3.26.0
+25-01-03.14:42:11.619 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-03.14:42:11.641 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-03.14:42:12.350 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-01-03.14:42:12.379 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-01-03.14:42:12.390 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-01-03.14:42:12.406 [main            ] INFO  MonitorApplication     - Started MonitorApplication in 3.14 seconds (JVM running for 4.28)
+25-01-03.14:42:12.619 [RMI TCP Connection(1)-192.168.136.1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-01-03.14:42:12.619 [RMI TCP Connection(1)-192.168.136.1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-01-03.14:42:12.620 [RMI TCP Connection(1)-192.168.136.1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-01-03.14:42:12.992 [RMI TCP Connection(3)-192.168.136.1] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-03.14:42:13.752 [RMI TCP Connection(3)-192.168.136.1] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-01-03.14:42:26.775 [redisson-3-7    ] INFO  MonitorLogListener     - 监听监控日志消息，解析存储: {"className":"cn.catapp.monitor.test.ApiTest","logList":["测试日志1","10001","李二狗","{\"orderId\":\"109099893222\",\"userAge\":25,\"userId\":\"10001\",\"userName\":\"李二狗\"}"],"methodName":"test_log_02","systemName":"monitor-behaviour-test"}
+25-01-03.14:43:07.423 [redisson-3-8    ] INFO  MonitorLogListener     - 监听监控日志消息，解析存储: {"className":"cn.catapp.monitor.test.ApiTest","logList":["测试日志1","10001","李二狗","{\"orderId\":\"109099893222\",\"userAge\":25,\"userId\":\"10001\",\"userName\":\"李二狗\"}"],"methodName":"test_log_02","systemName":"monitor-behaviour-test"}
+25-01-03.14:43:37.930 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=54s60ms186µs900ns).
+25-01-03.14:44:51.904 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-01-03.14:44:51.913 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-01-03.14:45:28.400 [main            ] INFO  MonitorApplication     - Starting MonitorApplication using Java 1.8.0_281 on catlap with PID 19220 (D:\WorkSpace\GagaPlus\business-behavior-monitor\business-behavior-monitor-admin\target\classes started by Cat in D:\WorkSpace\GagaPlus\business-behavior-monitor)
+25-01-03.14:45:28.403 [main            ] INFO  MonitorApplication     - No active profile set, falling back to 1 default profile: "default"
+25-01-03.14:45:29.040 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-01-03.14:45:29.041 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-01-03.14:45:29.058 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+25-01-03.14:45:29.392 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-01-03.14:45:29.393 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.33] using APR version [1.7.0].
+25-01-03.14:45:29.393 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-01-03.14:45:29.393 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-01-03.14:45:29.395 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1o  3 May 2022]
+25-01-03.14:45:29.400 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-01-03.14:45:29.400 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-01-03.14:45:29.400 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-01-03.14:45:29.503 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-01-03.14:45:29.503 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1068 ms
+25-01-03.14:45:29.978 [main            ] INFO  Version                - Redisson 3.26.0
+25-01-03.14:45:30.314 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-03.14:45:30.334 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-03.14:45:31.032 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-01-03.14:45:31.073 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-01-03.14:45:31.089 [main            ] INFO  MonitorApplication     - Started MonitorApplication in 3.144 seconds (JVM running for 3.95)
+25-01-03.14:45:35.384 [main            ] INFO  MonitorApplication     - Starting MonitorApplication using Java 1.8.0_281 on catlap with PID 18708 (D:\WorkSpace\GagaPlus\business-behavior-monitor\business-behavior-monitor-admin\target\classes started by Cat in D:\WorkSpace\GagaPlus\business-behavior-monitor)
+25-01-03.14:45:35.387 [main            ] INFO  MonitorApplication     - No active profile set, falling back to 1 default profile: "default"
+25-01-03.14:45:36.245 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-01-03.14:45:36.248 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-01-03.14:45:36.279 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+25-01-03.14:45:36.763 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-01-03.14:45:36.764 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.33] using APR version [1.7.0].
+25-01-03.14:45:36.764 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-01-03.14:45:36.764 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-01-03.14:45:36.766 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1o  3 May 2022]
+25-01-03.14:45:36.773 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-01-03.14:45:36.773 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-01-03.14:45:36.773 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-01-03.14:45:36.906 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-01-03.14:45:36.906 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1476 ms
+25-01-03.14:45:37.536 [main            ] INFO  Version                - Redisson 3.26.0
+25-01-03.14:45:37.912 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-03.14:45:37.928 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-03.14:45:38.712 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-01-03.14:45:38.755 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-01-03.14:45:38.771 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-01-03.14:45:38.817 [main            ] INFO  MonitorApplication     - Started MonitorApplication in 4.255 seconds (JVM running for 5.731)
+25-01-03.14:45:39.285 [RMI TCP Connection(1)-192.168.136.1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-01-03.14:45:39.285 [RMI TCP Connection(1)-192.168.136.1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-01-03.14:45:39.287 [RMI TCP Connection(1)-192.168.136.1] INFO  DispatcherServlet      - Completed initialization in 2 ms
+25-01-03.14:45:39.293 [RMI TCP Connection(2)-192.168.136.1] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-03.14:45:40.317 [RMI TCP Connection(2)-192.168.136.1] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-01-03.14:45:49.064 [redisson-3-7    ] INFO  MonitorLogListener     - 监听监控日志消息，解析存储: {"className":"cn.catapp.monitor.test.ApiTest","logList":["测试日志1","10001","李二狗","{\"orderId\":\"109099893222\",\"userAge\":25,\"userId\":\"10001\",\"userName\":\"李二狗\"}"],"methodName":"test_log_02","systemName":"monitor-behaviour-test"}
+25-01-03.14:46:52.948 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m12s359ms287µs800ns).
+25-01-03.14:48:09.532 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m16s585ms821µs200ns).
+25-01-03.14:48:14.878 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-01-03.14:48:14.883 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-01-03.14:50:18.981 [main            ] INFO  MonitorApplication     - Starting MonitorApplication using Java 1.8.0_281 on catlap with PID 2948 (D:\WorkSpace\GagaPlus\business-behavior-monitor\business-behavior-monitor-admin\target\classes started by Cat in D:\WorkSpace\GagaPlus\business-behavior-monitor)
+25-01-03.14:50:18.985 [main            ] INFO  MonitorApplication     - No active profile set, falling back to 1 default profile: "default"
+25-01-03.14:50:20.100 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-01-03.14:50:20.104 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-01-03.14:50:20.135 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+25-01-03.14:50:20.602 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-01-03.14:50:20.602 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.33] using APR version [1.7.0].
+25-01-03.14:50:20.603 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-01-03.14:50:20.603 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-01-03.14:50:20.605 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1o  3 May 2022]
+25-01-03.14:50:20.610 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-01-03.14:50:20.610 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-01-03.14:50:20.610 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-01-03.14:50:20.732 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-01-03.14:50:20.732 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1702 ms
+25-01-03.14:50:21.251 [main            ] INFO  Version                - Redisson 3.26.0
+25-01-03.14:50:21.591 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-03.14:50:21.608 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-03.14:50:22.313 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-01-03.14:50:22.358 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-01-03.14:50:22.375 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-01-03.14:50:22.393 [main            ] INFO  MonitorApplication     - Started MonitorApplication in 3.888 seconds (JVM running for 4.694)
+25-01-03.14:50:22.998 [RMI TCP Connection(5)-192.168.136.1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-01-03.14:50:22.998 [RMI TCP Connection(5)-192.168.136.1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-01-03.14:50:22.999 [RMI TCP Connection(5)-192.168.136.1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-01-03.14:50:23.000 [RMI TCP Connection(4)-192.168.136.1] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-03.14:50:23.820 [RMI TCP Connection(4)-192.168.136.1] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-01-03.14:50:41.036 [redisson-3-7    ] INFO  MonitorLogListener     - 监听监控日志消息，解析存储: {"className":"cn.catapp.monitor.test.ApiTest","logList":["测试日志1","10001","李二狗","{\"orderId\":\"109099893222\",\"userAge\":25,\"userId\":\"10001\",\"userName\":\"李二狗\"}"],"methodName":"test_log_02","systemName":"monitor-behaviour-test"}
+25-01-03.14:51:11.280 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=47s354ms364µs500ns).
+25-01-03.14:51:40.604 [redisson-3-8    ] INFO  MonitorLogListener     - 监听监控日志消息，解析存储: {"className":"cn.catapp.monitor.test.ApiTest","logList":["测试日志1","10001","李二狗","{\"orderId\":\"109099893222\",\"userAge\":25,\"userId\":\"10001\",\"userName\":\"李二狗\"}"],"methodName":"test_log_02","systemName":"monitor-behaviour-test"}
+25-01-03.14:52:10.836 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-01-03.14:52:10.847 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-01-03.14:53:06.907 [main            ] INFO  MonitorApplication     - Starting MonitorApplication using Java 1.8.0_281 on catlap with PID 10484 (D:\WorkSpace\GagaPlus\business-behavior-monitor\business-behavior-monitor-admin\target\classes started by Cat in D:\WorkSpace\GagaPlus\business-behavior-monitor)
+25-01-03.14:53:06.910 [main            ] INFO  MonitorApplication     - No active profile set, falling back to 1 default profile: "default"
+25-01-03.14:53:07.523 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-01-03.14:53:07.526 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-01-03.14:53:07.549 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+25-01-03.14:53:07.815 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-01-03.14:53:07.816 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.33] using APR version [1.7.0].
+25-01-03.14:53:07.816 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-01-03.14:53:07.816 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-01-03.14:53:07.818 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1o  3 May 2022]
+25-01-03.14:53:07.821 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-01-03.14:53:07.822 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-01-03.14:53:07.822 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-01-03.14:53:07.926 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-01-03.14:53:07.926 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 977 ms
+25-01-03.14:53:08.273 [main            ] INFO  Version                - Redisson 3.26.0
+25-01-03.14:53:08.545 [redisson-netty-1-5] INFO  ConnectionsHolder      - 1 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-03.14:53:08.558 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-03.14:53:09.024 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-01-03.14:53:09.046 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-01-03.14:53:09.052 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-01-03.14:53:09.063 [main            ] INFO  MonitorApplication     - Started MonitorApplication in 2.561 seconds (JVM running for 3.218)
+25-01-03.14:53:09.384 [RMI TCP Connection(3)-192.168.136.1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-01-03.14:53:09.384 [RMI TCP Connection(3)-192.168.136.1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-01-03.14:53:09.385 [RMI TCP Connection(3)-192.168.136.1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-01-03.14:53:09.386 [RMI TCP Connection(2)-192.168.136.1] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-03.14:53:09.750 [RMI TCP Connection(2)-192.168.136.1] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-01-03.14:53:44.364 [redisson-3-7    ] INFO  MonitorLogListener     - 监听监控日志消息，解析存储: {"className":"cn.catapp.monitor.test.ApiTest","logList":["测试日志1","10001","李二狗","{\"orderId\":\"109099893222\",\"userAge\":25,\"userId\":\"10001\",\"userName\":\"李二狗\"}"],"methodName":"test_log_02","systemName":"monitor-behavior-test"}
+25-01-03.14:54:31.113 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-01-03.14:54:31.118 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-01-03.14:55:23.140 [main            ] INFO  MonitorApplication     - Starting MonitorApplication using Java 1.8.0_281 on catlap with PID 8660 (D:\WorkSpace\GagaPlus\business-behavior-monitor\business-behavior-monitor-admin\target\classes started by Cat in D:\WorkSpace\GagaPlus\business-behavior-monitor)
+25-01-03.14:55:23.144 [main            ] INFO  MonitorApplication     - No active profile set, falling back to 1 default profile: "default"
+25-01-03.14:55:23.970 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-01-03.14:55:23.972 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-01-03.14:55:23.999 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+25-01-03.14:55:24.398 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-01-03.14:55:24.399 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.33] using APR version [1.7.0].
+25-01-03.14:55:24.399 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-01-03.14:55:24.400 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-01-03.14:55:24.404 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1o  3 May 2022]
+25-01-03.14:55:24.413 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-01-03.14:55:24.414 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-01-03.14:55:24.415 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-01-03.14:55:24.544 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-01-03.14:55:24.544 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1331 ms
+25-01-03.14:55:24.991 [main            ] INFO  Version                - Redisson 3.26.0
+25-01-03.14:55:25.368 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-03.14:55:25.381 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-03.14:55:25.935 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-01-03.14:55:25.962 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-01-03.14:55:25.972 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-01-03.14:55:25.987 [main            ] INFO  MonitorApplication     - Started MonitorApplication in 3.361 seconds (JVM running for 3.985)
+25-01-03.14:55:26.082 [RMI TCP Connection(1)-192.168.136.1] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-03.14:55:26.535 [RMI TCP Connection(3)-192.168.136.1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-01-03.14:55:26.535 [RMI TCP Connection(3)-192.168.136.1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-01-03.14:55:26.536 [RMI TCP Connection(3)-192.168.136.1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-01-03.14:55:26.629 [RMI TCP Connection(1)-192.168.136.1] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-01-03.14:55:33.601 [http-nio-8091-exec-2] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.14:55:53.218 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-01-03.14:55:53.235 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-01-03.15:01:26.139 [main            ] INFO  MonitorApplication     - Starting MonitorApplication using Java 1.8.0_281 on catlap with PID 18168 (D:\WorkSpace\GagaPlus\business-behavior-monitor\business-behavior-monitor-admin\target\classes started by Cat in D:\WorkSpace\GagaPlus\business-behavior-monitor)
+25-01-03.15:01:26.143 [main            ] INFO  MonitorApplication     - No active profile set, falling back to 1 default profile: "default"
+25-01-03.15:01:26.716 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-01-03.15:01:26.717 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-01-03.15:01:26.736 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+25-01-03.15:01:27.111 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-01-03.15:01:27.112 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.33] using APR version [1.7.0].
+25-01-03.15:01:27.112 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-01-03.15:01:27.112 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-01-03.15:01:27.115 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1o  3 May 2022]
+25-01-03.15:01:27.122 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-01-03.15:01:27.123 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-01-03.15:01:27.123 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-01-03.15:01:27.296 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-01-03.15:01:27.297 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1115 ms
+25-01-03.15:01:27.893 [main            ] INFO  Version                - Redisson 3.26.0
+25-01-03.15:01:28.249 [redisson-netty-1-5] INFO  ConnectionsHolder      - 1 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-03.15:01:28.266 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-03.15:01:28.925 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-01-03.15:01:28.949 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-01-03.15:01:28.958 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-01-03.15:01:28.971 [main            ] INFO  MonitorApplication     - Started MonitorApplication in 3.251 seconds (JVM running for 4.186)
+25-01-03.15:01:29.392 [RMI TCP Connection(1)-192.168.136.1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-01-03.15:01:29.392 [RMI TCP Connection(1)-192.168.136.1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-01-03.15:01:29.394 [RMI TCP Connection(1)-192.168.136.1] INFO  DispatcherServlet      - Completed initialization in 2 ms
+25-01-03.15:01:29.814 [RMI TCP Connection(3)-192.168.136.1] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-03.15:01:30.382 [RMI TCP Connection(3)-192.168.136.1] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-01-03.15:01:41.548 [http-nio-8091-exec-4] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:01:44.129 [http-nio-8091-exec-5] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:01:46.707 [http-nio-8091-exec-6] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:01:51.713 [http-nio-8091-exec-7] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:17:29.312 [redisson-netty-1-10] ERROR ErrorsLoggingHandler   - Exception occured. Channel: [id: 0x8fb6285b, L:/192.168.136.1:61646 - R:192.168.136.129/192.168.136.129:6379]
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+25-01-03.15:17:29.312 [redisson-netty-1-8] ERROR ErrorsLoggingHandler   - Exception occured. Channel: [id: 0x86519b6e, L:/192.168.136.1:61645 - R:192.168.136.129/192.168.136.129:6379]
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+25-01-03.15:17:29.312 [redisson-netty-1-12] ERROR ErrorsLoggingHandler   - Exception occured. Channel: [id: 0x3ed8f45c, L:/192.168.136.1:61647 - R:192.168.136.129/192.168.136.129:6379]
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+25-01-03.15:17:29.312 [redisson-netty-1-2] ERROR ErrorsLoggingHandler   - Exception occured. Channel: [id: 0x1ea2d744, L:/192.168.136.1:61642 - R:192.168.136.129/192.168.136.129:6379]
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+25-01-03.15:17:29.312 [redisson-netty-1-3] ERROR ErrorsLoggingHandler   - Exception occured. Channel: [id: 0x4ff0acef, L:/192.168.136.1:61643 - R:192.168.136.129/192.168.136.129:6379]
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+25-01-03.15:17:29.312 [redisson-netty-1-6] ERROR ErrorsLoggingHandler   - Exception occured. Channel: [id: 0xc482d9a5, L:/192.168.136.1:61644 - R:192.168.136.129/192.168.136.129:6379]
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+25-01-03.15:28:20.671 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m20s123ms834µs800ns).
+25-01-03.15:29:01.663 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-01-03.15:29:01.698 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-01-03.15:29:05.717 [main            ] INFO  MonitorApplication     - Starting MonitorApplication using Java 1.8.0_281 on catlap with PID 18360 (D:\WorkSpace\GagaPlus\business-behavior-monitor\business-behavior-monitor-admin\target\classes started by Cat in D:\WorkSpace\GagaPlus\business-behavior-monitor)
+25-01-03.15:29:05.721 [main            ] INFO  MonitorApplication     - No active profile set, falling back to 1 default profile: "default"
+25-01-03.15:29:06.542 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-01-03.15:29:06.543 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-01-03.15:29:06.567 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+25-01-03.15:29:06.902 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-01-03.15:29:06.902 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.33] using APR version [1.7.0].
+25-01-03.15:29:06.902 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-01-03.15:29:06.902 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-01-03.15:29:06.905 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1o  3 May 2022]
+25-01-03.15:29:06.911 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-01-03.15:29:06.911 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-01-03.15:29:06.911 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-01-03.15:29:07.018 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-01-03.15:29:07.018 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1239 ms
+25-01-03.15:29:07.443 [main            ] INFO  Version                - Redisson 3.26.0
+25-01-03.15:29:07.762 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-03.15:29:07.776 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-03.15:29:08.264 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-01-03.15:29:08.284 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-01-03.15:29:08.290 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-01-03.15:29:08.301 [main            ] INFO  MonitorApplication     - Started MonitorApplication in 3.293 seconds (JVM running for 4.836)
+25-01-03.15:29:08.712 [RMI TCP Connection(1)-192.168.136.1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-01-03.15:29:08.712 [RMI TCP Connection(1)-192.168.136.1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-01-03.15:29:08.713 [RMI TCP Connection(1)-192.168.136.1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-01-03.15:29:08.713 [RMI TCP Connection(2)-192.168.136.1] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-03.15:29:09.184 [RMI TCP Connection(2)-192.168.136.1] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-01-03.15:29:20.159 [http-nio-8091-exec-4] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:29:21.619 [http-nio-8091-exec-2] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:29:25.434 [http-nio-8091-exec-6] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:29:28.040 [http-nio-8091-exec-8] INFO  MonitorController      - 更新监控图配置 monitorId:111
+25-01-03.15:29:30.559 [http-nio-8091-exec-9] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:29:35.438 [http-nio-8091-exec-10] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:29:38.737 [http-nio-8091-exec-3] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:29:39.557 [http-nio-8091-exec-2] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:29:45.438 [http-nio-8091-exec-7] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:29:49.564 [http-nio-8091-exec-8] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:29:50.825 [http-nio-8091-exec-10] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:29:56.434 [http-nio-8091-exec-4] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:30:01.432 [http-nio-8091-exec-3] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:30:06.443 [http-nio-8091-exec-5] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:30:11.441 [http-nio-8091-exec-6] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:30:16.444 [http-nio-8091-exec-2] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:30:20.831 [http-nio-8091-exec-7] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:30:26.446 [http-nio-8091-exec-8] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:30:31.443 [http-nio-8091-exec-9] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:30:36.450 [http-nio-8091-exec-1] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:30:41.448 [http-nio-8091-exec-10] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:30:46.443 [http-nio-8091-exec-4] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:30:51.448 [http-nio-8091-exec-3] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:30:55.198 [http-nio-8091-exec-7] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:31:00.446 [http-nio-8091-exec-9] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:31:05.446 [http-nio-8091-exec-1] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:31:10.435 [http-nio-8091-exec-10] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:31:15.442 [http-nio-8091-exec-4] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:31:20.445 [http-nio-8091-exec-3] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:31:25.213 [http-nio-8091-exec-5] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:31:30.433 [http-nio-8091-exec-2] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:31:31.568 [http-nio-8091-exec-7] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:31:36.567 [http-nio-8091-exec-1] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:31:42.438 [http-nio-8091-exec-10] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:31:47.434 [http-nio-8091-exec-4] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:31:52.450 [http-nio-8091-exec-3] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:31:57.459 [http-nio-8091-exec-5] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:32:02.444 [http-nio-8091-exec-6] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:32:07.449 [http-nio-8091-exec-2] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:32:12.435 [http-nio-8091-exec-8] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:32:13.416 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-01-03.15:32:13.431 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-01-03.15:32:16.087 [main            ] INFO  MonitorApplication     - Starting MonitorApplication using Java 1.8.0_281 on catlap with PID 14776 (D:\WorkSpace\GagaPlus\business-behavior-monitor\business-behavior-monitor-admin\target\classes started by Cat in D:\WorkSpace\GagaPlus\business-behavior-monitor)
+25-01-03.15:32:16.090 [main            ] INFO  MonitorApplication     - No active profile set, falling back to 1 default profile: "default"
+25-01-03.15:32:16.737 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-01-03.15:32:16.739 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-01-03.15:32:16.765 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+25-01-03.15:32:17.140 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-01-03.15:32:17.141 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.33] using APR version [1.7.0].
+25-01-03.15:32:17.141 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-01-03.15:32:17.141 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-01-03.15:32:17.144 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1o  3 May 2022]
+25-01-03.15:32:17.154 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-01-03.15:32:17.155 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-01-03.15:32:17.155 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-01-03.15:32:17.350 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-01-03.15:32:17.350 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1220 ms
+25-01-03.15:32:17.698 [main            ] INFO  Version                - Redisson 3.26.0
+25-01-03.15:32:17.948 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-03.15:32:17.960 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-03.15:32:18.353 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-01-03.15:32:18.380 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-01-03.15:32:18.388 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-01-03.15:32:18.400 [main            ] INFO  MonitorApplication     - Started MonitorApplication in 2.7 seconds (JVM running for 3.36)
+25-01-03.15:32:18.499 [http-nio-8091-exec-2] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-01-03.15:32:18.499 [http-nio-8091-exec-2] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-01-03.15:32:18.501 [http-nio-8091-exec-2] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-01-03.15:32:18.524 [http-nio-8091-exec-2] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:32:18.537 [http-nio-8091-exec-2] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-03.15:32:19.057 [http-nio-8091-exec-2] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-01-03.15:32:22.159 [http-nio-8091-exec-1] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:32:26.572 [http-nio-8091-exec-4] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:32:32.436 [http-nio-8091-exec-5] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:32:37.446 [http-nio-8091-exec-3] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:32:42.444 [http-nio-8091-exec-7] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:32:47.435 [http-nio-8091-exec-8] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:32:52.445 [http-nio-8091-exec-6] INFO  MonitorController      - 查询监控流数据 monitorId:111
+25-01-03.15:32:56.252 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-01-03.15:32:56.256 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-01-03.15:33:02.860 [main            ] INFO  MonitorApplication     - Starting MonitorApplication using Java 1.8.0_281 on catlap with PID 19164 (D:\WorkSpace\GagaPlus\business-behavior-monitor\business-behavior-monitor-admin\target\classes started by Cat in D:\WorkSpace\GagaPlus\business-behavior-monitor)
+25-01-03.15:33:02.864 [main            ] INFO  MonitorApplication     - No active profile set, falling back to 1 default profile: "default"
+25-01-03.15:33:03.714 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-01-03.15:33:03.716 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-01-03.15:33:03.736 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+25-01-03.15:33:04.074 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-01-03.15:33:04.075 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.33] using APR version [1.7.0].
+25-01-03.15:33:04.075 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-01-03.15:33:04.075 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-01-03.15:33:04.076 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1o  3 May 2022]
+25-01-03.15:33:04.081 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-01-03.15:33:04.081 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-01-03.15:33:04.081 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-01-03.15:33:04.192 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-01-03.15:33:04.192 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1283 ms
+25-01-03.15:33:04.688 [main            ] INFO  Version                - Redisson 3.26.0
+25-01-03.15:33:05.066 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-03.15:33:05.081 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-03.15:33:05.588 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-01-03.15:33:05.618 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-01-03.15:33:05.624 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-01-03.15:33:05.634 [main            ] INFO  MonitorApplication     - Started MonitorApplication in 3.359 seconds (JVM running for 4.439)
+25-01-03.15:33:05.895 [RMI TCP Connection(3)-192.168.136.1] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-03.15:33:06.265 [RMI TCP Connection(5)-192.168.136.1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-01-03.15:33:06.265 [RMI TCP Connection(5)-192.168.136.1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-01-03.15:33:06.268 [RMI TCP Connection(5)-192.168.136.1] INFO  DispatcherServlet      - Completed initialization in 3 ms
+25-01-03.15:33:06.329 [RMI TCP Connection(3)-192.168.136.1] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-01-03.15:35:54.391 [http-nio-8091-exec-9] INFO  MonitorController      - 更新监控图配置 monitorId:111
+25-01-03.15:36:45.268 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-01-03.15:36:45.277 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-01-03.15:36:48.534 [main            ] INFO  MonitorApplication     - Starting MonitorApplication using Java 1.8.0_281 on catlap with PID 6516 (D:\WorkSpace\GagaPlus\business-behavior-monitor\business-behavior-monitor-admin\target\classes started by Cat in D:\WorkSpace\GagaPlus\business-behavior-monitor)
+25-01-03.15:36:48.536 [main            ] INFO  MonitorApplication     - No active profile set, falling back to 1 default profile: "default"
+25-01-03.15:36:49.263 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-01-03.15:36:49.264 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-01-03.15:36:49.283 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+25-01-03.15:36:49.631 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-01-03.15:36:49.632 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.33] using APR version [1.7.0].
+25-01-03.15:36:49.633 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-01-03.15:36:49.633 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-01-03.15:36:49.637 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1o  3 May 2022]
+25-01-03.15:36:49.649 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-01-03.15:36:49.650 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-01-03.15:36:49.650 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-01-03.15:36:49.762 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-01-03.15:36:49.762 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1195 ms
+25-01-03.15:36:50.190 [main            ] INFO  Version                - Redisson 3.26.0
+25-01-03.15:36:50.541 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-03.15:36:50.561 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-03.15:36:51.263 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-01-03.15:36:51.287 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-01-03.15:36:51.297 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-01-03.15:36:51.311 [main            ] INFO  MonitorApplication     - Started MonitorApplication in 3.219 seconds (JVM running for 3.964)
+25-01-03.15:36:51.497 [http-nio-8091-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-01-03.15:36:51.497 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-01-03.15:36:51.499 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Completed initialization in 2 ms
+25-01-03.15:36:51.555 [http-nio-8091-exec-1] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-03.15:36:52.516 [http-nio-8091-exec-1] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-01-03.15:38:02.999 [http-nio-8091-exec-9] INFO  MonitorController      - 更新监控图配置 monitorId:111
+25-01-03.15:39:50.562 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m57s923ms684µs100ns).
+25-01-03.15:40:59.785 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m9s222ms84µs300ns).
+25-01-03.15:41:38.355 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-01-03.15:41:38.361 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-01-03.15:49:50.251 [main            ] INFO  MonitorApplication     - Starting MonitorApplication using Java 1.8.0_281 on catlap with PID 13932 (D:\WorkSpace\GagaPlus\business-behavior-monitor\business-behavior-monitor-admin\target\classes started by Cat in D:\WorkSpace\GagaPlus\business-behavior-monitor)
+25-01-03.15:49:50.255 [main            ] INFO  MonitorApplication     - No active profile set, falling back to 1 default profile: "default"
+25-01-03.15:49:51.007 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-01-03.15:49:51.009 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-01-03.15:49:51.031 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+25-01-03.15:49:51.337 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-01-03.15:49:51.337 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.33] using APR version [1.7.0].
+25-01-03.15:49:51.337 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-01-03.15:49:51.337 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-01-03.15:49:51.339 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1o  3 May 2022]
+25-01-03.15:49:51.344 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-01-03.15:49:51.344 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-01-03.15:49:51.344 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-01-03.15:49:51.456 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-01-03.15:49:51.457 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1156 ms
+25-01-03.15:49:51.975 [main            ] INFO  Version                - Redisson 3.26.0
+25-01-03.15:49:52.422 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-03.15:49:52.439 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-03.15:49:53.112 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-01-03.15:49:53.139 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-01-03.15:49:53.149 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-01-03.15:49:53.165 [main            ] INFO  MonitorApplication     - Started MonitorApplication in 3.373 seconds (JVM running for 4.136)
+25-01-03.15:49:53.372 [RMI TCP Connection(1)-192.168.136.1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-01-03.15:49:53.372 [RMI TCP Connection(1)-192.168.136.1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-01-03.15:49:53.374 [RMI TCP Connection(1)-192.168.136.1] INFO  DispatcherServlet      - Completed initialization in 2 ms
+25-01-03.15:49:53.874 [RMI TCP Connection(3)-192.168.136.1] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-03.15:49:54.503 [RMI TCP Connection(3)-192.168.136.1] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-01-03.15:50:42.990 [http-nio-8091-exec-1] INFO  MonitorController      - 更新监控图配置 monitorId:111
+25-01-03.15:51:41.675 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-01-03.15:51:41.706 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-01-03.16:00:51.747 [main            ] INFO  MonitorApplication     - Starting MonitorApplication using Java 1.8.0_281 on catlap with PID 17852 (D:\WorkSpace\GagaPlus\business-behavior-monitor\business-behavior-monitor-admin\target\classes started by Cat in D:\WorkSpace\GagaPlus\business-behavior-monitor)
+25-01-03.16:00:51.750 [main            ] INFO  MonitorApplication     - No active profile set, falling back to 1 default profile: "default"
+25-01-03.16:00:52.377 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-01-03.16:00:52.378 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-01-03.16:00:52.394 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+25-01-03.16:00:52.677 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-01-03.16:00:52.798 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1010 ms
+25-01-03.16:00:53.227 [main            ] INFO  Version                - Redisson 3.26.0
+25-01-03.16:00:56.964 [main            ] INFO  MonitorApplication     - Starting MonitorApplication using Java 1.8.0_281 on catlap with PID 13668 (D:\WorkSpace\GagaPlus\business-behavior-monitor\business-behavior-monitor-admin\target\classes started by Cat in D:\WorkSpace\GagaPlus\business-behavior-monitor)
+25-01-03.16:00:56.966 [main            ] INFO  MonitorApplication     - No active profile set, falling back to 1 default profile: "default"
+25-01-03.16:00:57.759 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-01-03.16:00:57.762 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-01-03.16:00:57.787 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+25-01-03.16:00:58.283 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-01-03.16:00:58.283 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.33] using APR version [1.7.0].
+25-01-03.16:00:58.283 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-01-03.16:00:58.284 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-01-03.16:00:58.285 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1o  3 May 2022]
+25-01-03.16:00:58.291 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-01-03.16:00:58.292 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-01-03.16:00:58.292 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-01-03.16:00:58.427 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-01-03.16:00:58.428 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1424 ms
+25-01-03.16:00:59.029 [main            ] INFO  Version                - Redisson 3.26.0
+25-01-03.16:00:59.516 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-03.16:00:59.534 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-03.16:01:00.268 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-01-03.16:01:00.304 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-01-03.16:01:00.318 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-01-03.16:01:00.336 [main            ] INFO  MonitorApplication     - Started MonitorApplication in 3.834 seconds (JVM running for 5.572)
+25-01-03.16:01:00.920 [RMI TCP Connection(2)-192.168.136.1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-01-03.16:01:00.920 [RMI TCP Connection(2)-192.168.136.1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-01-03.16:01:00.922 [RMI TCP Connection(2)-192.168.136.1] INFO  DispatcherServlet      - Completed initialization in 2 ms
+25-01-03.16:01:00.922 [RMI TCP Connection(1)-192.168.136.1] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-03.16:01:01.706 [RMI TCP Connection(1)-192.168.136.1] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-01-03.16:01:28.980 [http-nio-8091-exec-6] INFO  MonitorController      - 更新监控图配置 monitorId:111
+25-01-03.16:02:48.684 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-01-03.16:02:48.698 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-01-03.18:58:12.854 [main            ] INFO  MonitorApplication     - Starting MonitorApplication using Java 1.8.0_281 on catlap with PID 4316 (D:\WorkSpace\GagaPlus\business-behavior-monitor\business-behavior-monitor-admin\target\classes started by Cat in D:\WorkSpace\GagaPlus\business-behavior-monitor)
+25-01-03.18:58:12.858 [main            ] INFO  MonitorApplication     - No active profile set, falling back to 1 default profile: "default"
+25-01-03.18:58:14.118 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-01-03.18:58:14.121 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-01-03.18:58:14.168 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
+25-01-03.18:58:14.970 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-01-03.18:58:14.973 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.33] using APR version [1.7.0].
+25-01-03.18:58:14.973 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-01-03.18:58:14.973 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-01-03.18:58:14.976 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1o  3 May 2022]
+25-01-03.18:58:14.983 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-01-03.18:58:14.983 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-01-03.18:58:14.984 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-01-03.18:58:17.405 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-01-03.18:58:17.406 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4485 ms
+25-01-03.18:58:18.804 [main            ] INFO  Version                - Redisson 3.26.0
+25-01-03.18:58:20.079 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-03.18:58:20.119 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 192.168.136.129/192.168.136.129:6379
+25-01-03.18:58:21.129 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-01-03.18:58:21.161 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-01-03.18:58:21.176 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-01-03.18:58:21.197 [main            ] INFO  MonitorApplication     - Started MonitorApplication in 9.22 seconds (JVM running for 17.644)
+25-01-03.18:58:21.892 [RMI TCP Connection(7)-192.168.136.1] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-01-03.18:58:21.899 [RMI TCP Connection(6)-192.168.136.1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-01-03.18:58:21.899 [RMI TCP Connection(6)-192.168.136.1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-01-03.18:58:21.901 [RMI TCP Connection(6)-192.168.136.1] INFO  DispatcherServlet      - Completed initialization in 2 ms
+25-01-03.18:58:23.117 [RMI TCP Connection(7)-192.168.136.1] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-01-03.19:00:06.771 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-01-03.19:00:06.781 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.

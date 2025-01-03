@@ -2,6 +2,7 @@ package cn.cat.monitor.domain.repository;
 
 import cn.cat.monitor.domain.model.entity.MonitorDataEntity;
 import cn.cat.monitor.domain.model.entity.MonitorDataMapEntity;
+import cn.cat.monitor.domain.model.entity.MonitorFlowDesignerEntity;
 import cn.cat.monitor.domain.model.valobj.GatherNodeExpressionVO;
 import cn.cat.monitor.domain.model.valobj.MonitorTreeConfigVO;
 
@@ -20,5 +21,7 @@ public interface IMonitorRepository {
     MonitorTreeConfigVO queryMonitorFlowData(String monitorId);
 
     List<MonitorDataEntity> queryMonitorDataEntityList(MonitorDataEntity monitorDataEntity);
+
+    void updateMonitorFlowDesigner(MonitorFlowDesignerEntity monitorFlowDesignerEntity);
 
 }
