@@ -4,6 +4,7 @@ import ch.qos.logback.classic.spi.ILoggingEvent;
 import ch.qos.logback.core.UnsynchronizedAppenderBase;
 import cn.cat.monitor.sdk.model.LogMessage;
 import cn.cat.monitor.sdk.push.IPush;
+import cn.cat.monitor.sdk.push.impl.KafkaPush;
 import cn.cat.monitor.sdk.push.impl.RedisPush;
 
 import java.util.Arrays;
@@ -19,7 +20,7 @@ public class CustomAppender<E> extends UnsynchronizedAppenderBase<E> {
     // redis 连接端口
     private int port;
 
-    private final IPush push = new RedisPush();
+    private final IPush push = new KafkaPush();
 
     @Override
     public void start() {
