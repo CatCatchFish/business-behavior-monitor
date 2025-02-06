@@ -2,6 +2,7 @@ package cn.cat.monitor.trigger.listener;
 
 import cn.cat.monitor.domain.service.ILogAnalyticalService;
 import cn.cat.monitor.sdk.model.LogMessage;
+import com.alibaba.fastjson2.JSON;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.springframework.kafka.annotation.KafkaListener;
@@ -26,7 +27,7 @@ public class KafkaLogListener {
         if (message.isPresent()) {
             Object msg = message.get();
             try {
-                LogMessage logMessage = (LogMessage) msg;
+                LogMessage logMessage = JSON.parseObject(msg.toString(), LogMessage.class);
                 logAnalyticalService.doAnalytical(logMessage.getSystemName(), logMessage.getClassName(), logMessage.getMethodName(), logMessage.getLogList());
 
                 // 消息消费确认

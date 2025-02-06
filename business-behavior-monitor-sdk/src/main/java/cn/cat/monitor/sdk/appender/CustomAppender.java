@@ -5,7 +5,6 @@ import ch.qos.logback.core.UnsynchronizedAppenderBase;
 import cn.cat.monitor.sdk.model.LogMessage;
 import cn.cat.monitor.sdk.push.IPush;
 import cn.cat.monitor.sdk.push.impl.KafkaPush;
-import cn.cat.monitor.sdk.push.impl.RedisPush;
 
 import java.util.Arrays;
 
